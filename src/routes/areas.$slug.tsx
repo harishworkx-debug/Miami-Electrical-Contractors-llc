@@ -51,7 +51,7 @@ export const Route = createFileRoute("/areas/$slug")({
 });
 
 function AreaPage() {
-  const { location: l } = Route.useLoaderData();
+  const { location: l } = Route.useLoaderData() as { location: import("@/lib/site").Location };
   const others = locations.filter((x) => x.slug !== l.slug);
 
   return (

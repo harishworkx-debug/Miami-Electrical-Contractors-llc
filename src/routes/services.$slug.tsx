@@ -61,7 +61,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServicePage() {
-  const { service: s } = Route.useLoaderData();
+  const { service: s } = Route.useLoaderData() as { service: import("@/lib/site").Service };
   const related = s.related.map((slug) => servicesBySlug[slug]).filter(Boolean);
 
   return (
