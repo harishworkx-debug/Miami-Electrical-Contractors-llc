@@ -26,17 +26,17 @@ export function Footer() {
               Veteran-owned electrical contractor serving residential, commercial and industrial clients across South Florida — 24 hours a day.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href={site.phoneHref} className="btn-primary text-sm"><Phone className="h-4 w-4"/> Call</a>
-              <a href={site.whatsapp} target="_blank" rel="noopener" className="btn-ghost text-sm bg-white/10 border-white/15 text-white hover:bg-white/15"><MessageCircle className="h-4 w-4"/> WhatsApp</a>
+              <a href={site.phoneHref} className="btn-primary text-sm"><Phone className="h-4 w-4" /> Call</a>
+              <a href={site.whatsapp} target="_blank" rel="noopener" className="btn-ghost text-sm bg-white/10 border-white/15 text-white hover:bg-white/15"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
             </div>
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary/90">Services</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary/90">Popular Services</div>
             <ul className="mt-6 space-y-3 text-sm">
-              {services.slice(0, 8).map((s) => (
+              {services.slice(0, 10).map((s) => (
                 <li key={s.slug}>
-                  <Link to="/services/$slug" params={{ slug: s.slug }} className="text-white/70 hover:text-white">
+                  <Link to="/$slug" params={{ slug: s.slug }} className="text-white/70 hover:text-white">
                     {s.title}
                   </Link>
                 </li>
@@ -49,7 +49,7 @@ export function Footer() {
             <ul className="mt-6 space-y-3 text-sm">
               {locations.map((l) => (
                 <li key={l.slug}>
-                  <Link to="/areas/$slug" params={{ slug: l.slug }} className="text-white/70 hover:text-white">
+                  <Link to="/$slug" params={{ slug: l.slug }} className="text-white/70 hover:text-white">
                     Electrician in {l.city}
                   </Link>
                 </li>
@@ -60,11 +60,11 @@ export function Footer() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary/90">Contact</div>
             <ul className="mt-6 space-y-4 text-sm">
-              <li className="flex gap-3"><Phone className="h-4 w-4 text-primary mt-0.5"/><a href={site.phoneHref} className="text-white hover:text-primary font-semibold">{site.phone}</a></li>
-              <li className="flex gap-3"><MessageCircle className="h-4 w-4 text-[#25D366] mt-0.5"/><a href={site.whatsapp} target="_blank" rel="noopener" className="text-white/80 hover:text-white">WhatsApp us anytime</a></li>
-              <li className="flex gap-3"><MapPin className="h-4 w-4 text-primary mt-0.5"/><span className="text-white/70">{site.street}<br/>{site.city}, {site.state} {site.zip}</span></li>
-              <li className="flex gap-3"><Clock className="h-4 w-4 text-primary mt-0.5"/><span className="text-white/70">{site.hours}</span></li>
-              <li className="flex gap-3"><Mail className="h-4 w-4 text-primary mt-0.5"/><a href={`mailto:${site.email}`} className="text-white/70 hover:text-white">{site.email}</a></li>
+              <li className="flex gap-3"><Phone className="h-4 w-4 text-primary mt-0.5" /><a href={site.phoneHref} className="text-white hover:text-primary font-semibold">{site.phone}</a></li>
+              <li className="flex gap-3"><MessageCircle className="h-4 w-4 text-[#25D366] mt-0.5" /><a href={site.whatsapp} target="_blank" rel="noopener" className="text-white/80 hover:text-white">WhatsApp us anytime</a></li>
+              <li className="flex gap-3"><MapPin className="h-4 w-4 text-primary mt-0.5" /><span className="text-white/70">{site.street}<br />{site.city}, {site.state} {site.zip}</span></li>
+              <li className="flex gap-3"><Clock className="h-4 w-4 text-primary mt-0.5" /><span className="text-white/70">{site.hours}</span></li>
+              <li className="flex gap-3"><Mail className="h-4 w-4 text-primary mt-0.5" /><a href={`mailto:${site.email}`} className="text-white/70 hover:text-white">{site.email}</a></li>
             </ul>
           </div>
         </div>
@@ -74,6 +74,7 @@ export function Footer() {
           <div className="flex gap-6">
             <Link to="/services" className="hover:text-white">Services</Link>
             <Link to="/about" className="hover:text-white">About</Link>
+            <Link to="/reviews" className="hover:text-white">Reviews</Link>
             <Link to="/contact" className="hover:text-white">Contact</Link>
           </div>
         </div>
