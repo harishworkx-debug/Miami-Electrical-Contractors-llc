@@ -85,9 +85,6 @@ function ServicesIndex() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                        Learn more <ArrowRight className="h-4 w-4" />
-                      </div>
                     </div>
                   </Link>
                 );

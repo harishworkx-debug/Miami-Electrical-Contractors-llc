@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
-      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call +1 (305) 610-2998 for a free estimate." },
+      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 610-2998 for a free estimate." },
       { property: "og:title", content: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
       { property: "og:description", content: "Veteran-owned Miami electricians. Residential, commercial and industrial service across South Florida. 24/7. Free estimates." },
       { property: "og:url", content: "/" },
@@ -40,24 +40,24 @@ const HERO_IMG = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?a
 
 const categories = [
   {
-    icon: HomeIcon, title: "Residential",
-    slug: "residential-electrical",
+    icon: HomeIcon, title: "Residential Electrician Miami, FL",
+    slug: "residential-electrician-miami-fl",
     desc: "Whole-home electrical for Miami homeowners — wiring, panels, lighting and more.",
     items: ["Panel Upgrades", "Rewires", "Lighting", "EV Chargers"],
     img: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: Building2, title: "Commercial",
-    slug: "commercial-electrical",
+    icon: Building2, title: "Commercial Electrician Miami, FL",
+    slug: "commercial-electrician-miami-fl",
     desc: "Design-build electrical for offices, retail, restaurants and multi-tenant buildings.",
     items: ["Tenant Build-Outs", "Emergency Lighting", "Signage", "Maintenance"],
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: Factory, title: "Industrial",
-    slug: "industrial-electrical",
-    desc: "3-phase power, motor controls, switchgear and PLC wiring for South Florida industry.",
-    items: ["Switchgear", "Motor Controls", "VFDs", "Arc-Flash"],
+    icon: Factory, title: "Electrical Installation Miami, FL",
+    slug: "electrical-installation-miami-fl",
+    desc: "Professional installations for panels, sub-panels, appliances and full remodels.",
+    items: ["Sub-Panels", "Appliance Circuits", "Remodels", "New Construction"],
     img: "https://images.unsplash.com/photo-1581091870627-3d1c1c1c0b1f?auto=format&fit=crop&w=900&q=80",
   },
 ];
@@ -295,7 +295,9 @@ function Home() {
                   </div>
                 </div>
                 <div className="p-7">
-                  <h3 className="font-display text-2xl font-semibold text-secondary">{title} Electrical</h3>
+                  <h3 className="font-display text-2xl font-semibold text-secondary group-hover:text-primary transition">
+                    <Link to="/$slug" params={{ slug }} className="hover:text-primary">{title}</Link>
+                  </h3>
                   <p className="mt-3 text-sm text-muted-foreground">{desc}</p>
                   <ul className="mt-5 grid grid-cols-2 gap-2 text-sm">
                     {items.map((it) => (
@@ -304,9 +306,6 @@ function Home() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/services/$slug" params={{ slug }} className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                    Learn more <ArrowRight className="h-4 w-4"/>
-                  </Link>
                 </div>
               </motion.div>
             ))}

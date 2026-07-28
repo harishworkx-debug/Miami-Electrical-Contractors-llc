@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
-      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call +1 (305) 610-2998." },
+      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 610-2998." },
       { name: "author", content: site.name },
       { name: "theme-color", content: "#0B1320" },
       { property: "og:site_name", content: site.name },
