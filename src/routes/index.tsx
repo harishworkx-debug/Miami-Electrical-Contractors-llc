@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
-      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call +1 (305) 610-2998 for a free estimate." },
+      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 610-2998 for a free estimate." },
       { property: "og:title", content: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
       { property: "og:description", content: "Veteran-owned Miami electricians. Residential, commercial and industrial service across South Florida. 24/7. Free estimates." },
       { property: "og:url", content: "/" },
