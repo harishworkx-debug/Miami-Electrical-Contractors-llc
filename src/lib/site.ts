@@ -270,7 +270,7 @@ export const services: Service[] = [
     title: "Outdoor Lighting",
     short: "Landscape, security and architectural outdoor lighting engineered for South Florida weather.",
     hero: "Outdoor and landscape lighting for Miami homes and businesses.",
-    image: img("photo-1470770841072-f978cf4d019e"),
+    image: "/images/outdoor_lighting.png",
     group: "Lighting",
     benefits: [
       "Low-voltage landscape design",
@@ -377,7 +377,7 @@ export const services: Service[] = [
     title: "EV Charger Installation",
     short: "Level-2 EV charger installation for homes, condos and workplaces across Miami — Tesla, ChargePoint and universal.",
     hero: "Home and workplace EV charger installation in Miami.",
-    image: img("photo-1593941707882-a5bac6861d75"),
+    image: "/images/ev_charger.png",
     group: "EV & Power",
     benefits: [
       "NEMA 14-50 and hardwired Level-2 installs",
@@ -411,7 +411,7 @@ export const services: Service[] = [
     title: "Generator Installation",
     short: "Whole-home and commercial standby generator installation for Miami hurricane season.",
     hero: "Standby generator installation for Miami homes and businesses.",
-    image: img("photo-1611288891475-1a3f2743e6f1"),
+    image: "/images/generator_installation.png",
     group: "EV & Power",
     benefits: [
       "Automatic transfer switch installs",
@@ -513,7 +513,7 @@ export const services: Service[] = [
     title: "Circuit Breaker Repair",
     short: "Diagnose and repair tripping, buzzing or failed circuit breakers across Miami homes and businesses.",
     hero: "Circuit breaker repair and replacement in Miami.",
-    image: img("photo-1621905251946-9c7a3b91b5f7"),
+    image: "/images/circuit_breaker_repair.png",
     group: "Repair",
     benefits: [
       "Same-day breaker replacements",
@@ -547,7 +547,7 @@ export const services: Service[] = [
     title: "Outlet Repair & Installation",
     short: "Dead outlet repair, GFCI installation, USB outlets and new outlet runs across Miami.",
     hero: "Outlet repair and installation for Miami homes and businesses.",
-    image: img("photo-1558449028-fd07437f3d5c"),
+    image: "/images/outlet_repair.png",
     group: "Repair",
     benefits: [
       "Dead outlet and half-hot fixes",
@@ -649,7 +649,7 @@ export const services: Service[] = [
     title: "Home Rewiring",
     short: "Complete home rewiring for older Miami properties — safe, code-compliant, and phased to keep power on.",
     hero: "Complete home rewiring across Miami.",
-    image: img("photo-1621905251507-b35492cc74b4"),
+    image: "/images/circuit_breaker_repair.png",
     group: "Panels & Wiring",
     benefits: [
       "Removes fire risk from old wiring",
