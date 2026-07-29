@@ -45,7 +45,10 @@ export function Nav() {
             <Zap className="h-3.5 w-3.5 text-primary" />
             24 Hour Emergency Electrician · Miami-Dade
           </span>
-          <a href={site.phoneHref} className="hidden sm:inline font-semibold text-primary hover:text-primary-glow">
+          <a
+            href={site.phoneHref}
+            className="hidden sm:inline font-semibold text-primary hover:text-primary-glow"
+          >
             {site.phone}
           </a>
         </div>
@@ -102,7 +105,9 @@ export function Nav() {
                   <div className="w-[720px] max-w-[92vw] rounded-2xl bg-white border border-border shadow-elegant p-6 grid grid-cols-3 gap-6">
                     {serviceMenuGroups.map((g) => (
                       <div key={g.label}>
-                        <div className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">{g.label}</div>
+                        <div className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+                          {g.label}
+                        </div>
                         <ul className="mt-3 space-y-1.5">
                           {g.items.map((it) => (
                             <li key={it.slug}>
@@ -138,7 +143,9 @@ export function Nav() {
               {openDropdown === "locations" && (
                 <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50">
                   <div className="w-[360px] max-w-[92vw] rounded-2xl bg-white border border-border shadow-elegant p-5">
-                    <div className="text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-3">Service Areas</div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-3">
+                      Service Areas
+                    </div>
                     <ul className="grid grid-cols-2 gap-1.5">
                       {locations.map((l) => (
                         <li key={l.slug}>
@@ -204,7 +211,9 @@ export function Nav() {
                 className="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-secondary hover:bg-secondary/5"
               >
                 <span>Services</span>
-                <ChevronDown className={`h-4 w-4 transition ${mobileGroup === "services" ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`h-4 w-4 transition ${mobileGroup === "services" ? "rotate-180" : ""}`}
+                />
               </button>
               {mobileGroup === "services" && (
                 <div className="pl-2 pb-2 space-y-3">
@@ -217,7 +226,9 @@ export function Nav() {
                   </Link>
                   {serviceMenuGroups.map((g) => (
                     <div key={g.label}>
-                      <div className="px-4 text-[10px] uppercase tracking-[0.15em] text-muted-foreground">{g.label}</div>
+                      <div className="px-4 text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
+                        {g.label}
+                      </div>
                       <ul className="mt-1">
                         {g.items.map((it) => (
                           <li key={it.slug}>
@@ -244,7 +255,9 @@ export function Nav() {
                 className="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-secondary hover:bg-secondary/5"
               >
                 <span>Locations</span>
-                <ChevronDown className={`h-4 w-4 transition ${mobileGroup === "locations" ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`h-4 w-4 transition ${mobileGroup === "locations" ? "rotate-180" : ""}`}
+                />
               </button>
               {mobileGroup === "locations" && (
                 <ul className="pl-2 pb-2 grid grid-cols-2 gap-1">

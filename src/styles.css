@@ -83,7 +83,11 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
@@ -112,7 +116,12 @@
 }
 
 @utility text-gradient {
-  background: linear-gradient(120deg, var(--primary) 0%, var(--primary-glow) 60%, var(--accent) 100%);
+  background: linear-gradient(
+    120deg,
+    var(--primary) 0%,
+    var(--primary-glow) 60%,
+    var(--accent) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -129,7 +138,10 @@
   color: var(--primary-foreground);
   background: linear-gradient(135deg, var(--primary), var(--primary-glow));
   box-shadow: var(--shadow-glow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
 }
 @utility btn-primary-hover {
   transform: translateY(-2px);
@@ -148,7 +160,9 @@
   background: color-mix(in oklab, white 60%, transparent);
   backdrop-filter: blur(10px);
   border: 1px solid color-mix(in oklab, var(--secondary) 15%, transparent);
-  transition: background 0.25s ease, transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 @utility grid-bg {

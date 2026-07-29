@@ -20,8 +20,16 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/about", changefreq: "monthly", priority: "0.6" },
           { path: "/reviews", changefreq: "weekly", priority: "0.7" },
           { path: "/contact", changefreq: "monthly", priority: "0.8" },
-          ...locations.map((l) => ({ path: `/${l.slug}`, changefreq: "monthly" as const, priority: l.isPillar ? "0.95" : "0.85" })),
-          ...services.map((s) => ({ path: `/${s.slug}`, changefreq: "monthly" as const, priority: "0.85" })),
+          ...locations.map((l) => ({
+            path: `/${l.slug}`,
+            changefreq: "monthly" as const,
+            priority: l.isPillar ? "0.95" : "0.85",
+          })),
+          ...services.map((s) => ({
+            path: `/${s.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.85",
+          })),
         ];
 
         const urls = entries.map((e) =>
@@ -31,7 +39,9 @@ export const Route = createFileRoute("/sitemap.xml")({
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
-          ].filter(Boolean).join("\n"),
+          ]
+            .filter(Boolean)
+            .join("\n"),
         );
 
         const xml = [

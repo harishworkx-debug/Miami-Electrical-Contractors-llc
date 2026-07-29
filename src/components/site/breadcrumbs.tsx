@@ -3,7 +3,13 @@ import { ChevronRight } from "lucide-react";
 
 export type Crumb = { label: string; to?: string };
 
-export function Breadcrumbs({ items, tone = "light" }: { items: Crumb[]; tone?: "light" | "dark" }) {
+export function Breadcrumbs({
+  items,
+  tone = "light",
+}: {
+  items: Crumb[];
+  tone?: "light" | "dark";
+}) {
   const base = tone === "dark" ? "text-white/60" : "text-muted-foreground";
   const link = tone === "dark" ? "hover:text-primary" : "hover:text-primary";
   const current = tone === "dark" ? "text-primary" : "text-secondary";
@@ -15,7 +21,9 @@ export function Breadcrumbs({ items, tone = "light" }: { items: Crumb[]; tone?: 
           return (
             <li key={i} className="flex items-center gap-1">
               {c.to && !isLast ? (
-                <Link to={c.to} className={link}>{c.label}</Link>
+                <Link to={c.to} className={link}>
+                  {c.label}
+                </Link>
               ) : (
                 <span className={isLast ? current : ""}>{c.label}</span>
               )}

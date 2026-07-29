@@ -1,4 +1,3 @@
-
 # SEO Architecture Rebuild — Miami Electrical Contractors LLC
 
 Design, colors, animations, layout, spacing and hero visuals stay exactly as they are. Only architecture, content, URLs, nav, metadata, schema and linking change.

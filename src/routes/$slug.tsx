@@ -1,5 +1,13 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Phone, MessageCircle, AlertTriangle, MapPin, Star } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Phone,
+  MessageCircle,
+  AlertTriangle,
+  MapPin,
+  Star,
+} from "lucide-react";
 import {
   findPage,
   locations,
@@ -12,13 +20,7 @@ import {
 import { CtaBand } from "@/components/site/cta-band";
 import { Breadcrumbs, breadcrumbSchema, type Crumb } from "@/components/site/breadcrumbs";
 
-const RESERVED = new Set([
-  "services",
-  "about",
-  "reviews",
-  "contact",
-  "sitemap.xml",
-]);
+const RESERVED = new Set(["services", "about", "reviews", "contact", "sitemap.xml"]);
 
 export const Route = createFileRoute("/$slug")({
   loader: ({ params }) => {
@@ -28,7 +30,8 @@ export const Route = createFileRoute("/$slug")({
     return match;
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Page not found" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData)
+      return { meta: [{ title: "Page not found" }, { name: "robots", content: "noindex" }] };
 
     const path = `/${params.slug}`;
     const url = `${site.url}${path}`;
@@ -151,7 +154,15 @@ export const Route = createFileRoute("/$slug")({
             openingHoursSpecification: [
               {
                 "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday",
+                ],
                 opens: "00:00",
                 closes: "23:59",
               },
@@ -183,8 +194,12 @@ export const Route = createFileRoute("/$slug")({
     <div className="container-x py-24 text-center">
       <h1 className="font-display text-3xl font-semibold">Page not found</h1>
       <div className="mt-6 flex justify-center gap-3">
-        <Link to="/services" className="btn-primary">All services</Link>
-        <Link to="/" className="btn-ghost">Home</Link>
+        <Link to="/services" className="btn-primary">
+          All services
+        </Link>
+        <Link to="/" className="btn-ghost">
+          Home
+        </Link>
       </div>
     </div>
   ),
@@ -207,7 +222,12 @@ function ServicePageView({ service: s }: { service: Service }) {
   return (
     <div>
       <section className="relative bg-secondary text-secondary-foreground overflow-hidden">
-        <img src={s.image} alt={`${s.title} services in Miami, FL`} className="absolute inset-0 h-full w-full object-cover opacity-30" loading="eager" />
+        <img
+          src={s.image}
+          alt={`${s.title} services in Miami, FL`}
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/85 to-secondary/60" />
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="relative container-x py-24">
@@ -224,16 +244,24 @@ function ServicePageView({ service: s }: { service: Service }) {
           </h1>
           <p className="mt-6 max-w-2xl text-white/70 text-lg">{s.hero}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={site.phoneHref} className="btn-primary"><Phone className="h-4 w-4" /> Call {site.phone}</a>
-            <a href={site.whatsapp} target="_blank" rel="noopener" className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
-            <Link to="/contact" className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15">Free Estimate <ArrowRight className="h-4 w-4" /></Link>
+            <a href={site.phoneHref} className="btn-primary">
+              <Phone className="h-4 w-4" /> Call {site.phone}
+            </a>
+            <Link
+              to="/contact"
+              className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"
+            >
+              Free Estimate <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="container-x py-20 grid gap-14 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Overview</div>
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            Overview
+          </div>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-secondary">
             {s.title.toLowerCase()} — done right, the first time.
           </h2>
@@ -243,7 +271,10 @@ function ServicePageView({ service: s }: { service: Service }) {
             <h2 className="font-display text-2xl font-semibold text-secondary">Benefits</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {s.benefits.map((b) => (
-                <div key={b} className="flex items-start gap-3 rounded-2xl border border-border p-4">
+                <div
+                  key={b}
+                  className="flex items-start gap-3 rounded-2xl border border-border p-4"
+                >
                   <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div className="text-sm text-secondary/90">{b}</div>
                 </div>
@@ -255,7 +286,10 @@ function ServicePageView({ service: s }: { service: Service }) {
             <h2 className="font-display text-2xl font-semibold text-secondary">What's included</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {s.features.map((b) => (
-                <div key={b} className="flex items-start gap-3 rounded-2xl bg-surface p-4 border border-border">
+                <div
+                  key={b}
+                  className="flex items-start gap-3 rounded-2xl bg-surface p-4 border border-border"
+                >
                   <Star className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div className="text-sm text-secondary/90">{b}</div>
                 </div>
@@ -264,10 +298,15 @@ function ServicePageView({ service: s }: { service: Service }) {
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-2xl font-semibold text-secondary">Common problems we fix</h2>
+            <h2 className="font-display text-2xl font-semibold text-secondary">
+              Common problems we fix
+            </h2>
             <div className="mt-5 space-y-3">
               {s.problems.map((p) => (
-                <div key={p} className="flex items-start gap-3 rounded-2xl bg-surface p-4 border border-border">
+                <div
+                  key={p}
+                  className="flex items-start gap-3 rounded-2xl bg-surface p-4 border border-border"
+                >
                   <AlertTriangle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div className="text-sm text-secondary/90">{p}</div>
                 </div>
@@ -276,7 +315,9 @@ function ServicePageView({ service: s }: { service: Service }) {
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-2xl font-semibold text-secondary">Our step-by-step process</h2>
+            <h2 className="font-display text-2xl font-semibold text-secondary">
+              Our step-by-step process
+            </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {s.process.map((p, i) => (
                 <div key={p.title} className="relative rounded-2xl border border-border p-6">
@@ -289,10 +330,15 @@ function ServicePageView({ service: s }: { service: Service }) {
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-2xl font-semibold text-secondary">Why choose {site.short}</h2>
+            <h2 className="font-display text-2xl font-semibold text-secondary">
+              Why choose {site.short}
+            </h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {s.whyChooseUs.map((b) => (
-                <div key={b} className="flex items-start gap-3 rounded-2xl border border-border p-4">
+                <div
+                  key={b}
+                  className="flex items-start gap-3 rounded-2xl border border-border p-4"
+                >
                   <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div className="text-sm text-secondary/90">{b}</div>
                 </div>
@@ -301,13 +347,20 @@ function ServicePageView({ service: s }: { service: Service }) {
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-2xl font-semibold text-secondary">Frequently asked questions</h2>
+            <h2 className="font-display text-2xl font-semibold text-secondary">
+              Frequently asked questions
+            </h2>
             <div className="mt-5 space-y-3">
               {s.faqs.map((f, i) => (
-                <details key={i} className="group rounded-2xl bg-card border border-border p-5 open:shadow-elegant">
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-card border border-border p-5 open:shadow-elegant"
+                >
                   <summary className="cursor-pointer font-semibold text-secondary flex items-center justify-between">
                     {f.q}
-                    <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary transition group-open:rotate-45">+</span>
+                    <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary transition group-open:rotate-45">
+                      +
+                    </span>
                   </summary>
                   <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
                 </details>
@@ -319,15 +372,20 @@ function ServicePageView({ service: s }: { service: Service }) {
         <aside className="lg:sticky lg:top-28 h-max space-y-6">
           <div className="rounded-3xl bg-secondary text-white p-7 shadow-elegant">
             <div className="text-xs uppercase tracking-[0.18em] text-primary">24/7 Service</div>
-            <div className="mt-2 font-display text-2xl font-semibold">Talk to a licensed electrician</div>
-            <p className="mt-2 text-sm text-white/70">Free estimates. Same-day service across Miami-Dade.</p>
+            <div className="mt-2 font-display text-2xl font-semibold">
+              Talk to a licensed electrician
+            </div>
+            <p className="mt-2 text-sm text-white/70">
+              Free estimates. Same-day service across Miami-Dade.
+            </p>
             <div className="mt-5 space-y-3">
-              <a href={site.phoneHref} className="flex items-center justify-between rounded-2xl bg-primary text-primary-foreground px-4 py-3 font-semibold">
-                <span className="inline-flex items-center gap-2"><Phone className="h-4 w-4" /> {site.phone}</span>
-                <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href={site.whatsapp} target="_blank" rel="noopener" className="flex items-center justify-between rounded-2xl bg-white/10 border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/15">
-                <span className="inline-flex items-center gap-2"><MessageCircle className="h-4 w-4 text-[#25D366]" /> WhatsApp us</span>
+              <a
+                href={site.phoneHref}
+                className="flex items-center justify-between rounded-2xl bg-primary text-primary-foreground px-4 py-3 font-semibold"
+              >
+                <span className="inline-flex items-center gap-2">
+                  <Phone className="h-4 w-4" /> {site.phone}
+                </span>
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -335,7 +393,9 @@ function ServicePageView({ service: s }: { service: Service }) {
 
           {related.length > 0 && (
             <div className="rounded-3xl border border-border bg-card p-7">
-              <div className="text-xs uppercase tracking-[0.18em] text-primary">Related services</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-primary">
+                Related services
+              </div>
               <div className="mt-4 space-y-2">
                 {related.map((r) => (
                   <Link
@@ -373,7 +433,10 @@ function ServicePageView({ service: s }: { service: Service }) {
         </aside>
       </section>
 
-      <CtaBand title={`Book ${s.title.toLowerCase()} in Miami today.`} subtitle="Free estimates, licensed technicians, and 24/7 emergency response across Miami-Dade." />
+      <CtaBand
+        title={`Book ${s.title.toLowerCase()} in Miami today.`}
+        subtitle="Free estimates, licensed technicians, and 24/7 emergency response across Miami-Dade."
+      />
     </div>
   );
 }
@@ -388,16 +451,17 @@ function LocationPageView({ location: l }: { location: Location }) {
   return (
     <div>
       <section className="relative bg-secondary text-secondary-foreground overflow-hidden">
-        <img src={l.image} alt={`Electrician in ${l.city}, FL`} className="absolute inset-0 h-full w-full object-cover opacity-40" loading="eager" />
+        <img
+          src={l.image}
+          alt={`Electrician in ${l.city}, FL`}
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/85 to-secondary/60" />
         <div className="relative container-x py-24">
           <Breadcrumbs
             tone="dark"
-            items={[
-              { label: "Home", to: "/" },
-              { label: "Locations" },
-              { label: l.city },
-            ]}
+            items={[{ label: "Home", to: "/" }, { label: "Locations" }, { label: l.city }]}
           />
           <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary border border-white/10">
             <MapPin className="h-3.5 w-3.5" /> Service area
@@ -407,16 +471,21 @@ function LocationPageView({ location: l }: { location: Location }) {
           </h1>
           <p className="mt-6 max-w-2xl text-white/70 text-lg">{l.hero}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={site.phoneHref} className="btn-primary"><Phone className="h-4 w-4" /> Call {site.phone}</a>
-            <a href={site.whatsapp} target="_blank" rel="noopener" className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+            <a href={site.phoneHref} className="btn-primary">
+              <Phone className="h-4 w-4" /> Call {site.phone}
+            </a>
           </div>
         </div>
       </section>
 
       <section className="container-x py-20 grid gap-12 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Local electrician</div>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-secondary">Your local electrician in {l.city}.</h2>
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            Local electrician
+          </div>
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-secondary">
+            Your local electrician in {l.city}.
+          </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">{l.intro}</p>
 
           <div className="mt-8 rounded-2xl border border-border p-5 bg-surface">
@@ -428,22 +497,36 @@ function LocationPageView({ location: l }: { location: Location }) {
             <h2 className="font-display text-xl font-semibold text-secondary">Landmarks nearby</h2>
             <div className="mt-4 flex flex-wrap gap-2">
               {l.landmarks.map((n) => (
-                <span key={n} className="rounded-full bg-surface border border-border px-4 py-1.5 text-sm text-secondary/80">{n}</span>
+                <span
+                  key={n}
+                  className="rounded-full bg-surface border border-border px-4 py-1.5 text-sm text-secondary/80"
+                >
+                  {n}
+                </span>
               ))}
             </div>
           </div>
 
           <div className="mt-8">
-            <h2 className="font-display text-xl font-semibold text-secondary">Neighborhoods we serve in {l.city}</h2>
+            <h2 className="font-display text-xl font-semibold text-secondary">
+              Neighborhoods we serve in {l.city}
+            </h2>
             <div className="mt-4 flex flex-wrap gap-2">
               {l.neighborhoods.map((n) => (
-                <span key={n} className="rounded-full bg-white border border-border px-4 py-1.5 text-sm text-secondary/80">{n}</span>
+                <span
+                  key={n}
+                  className="rounded-full bg-white border border-border px-4 py-1.5 text-sm text-secondary/80"
+                >
+                  {n}
+                </span>
               ))}
             </div>
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-xl font-semibold text-secondary">Why {l.city} chooses us</h2>
+            <h2 className="font-display text-xl font-semibold text-secondary">
+              Why {l.city} chooses us
+            </h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {[
                 "60-minute emergency response",
@@ -453,7 +536,10 @@ function LocationPageView({ location: l }: { location: Location }) {
                 "Permits pulled for every job",
                 "10-year workmanship warranty",
               ].map((b) => (
-                <div key={b} className="flex items-start gap-3 rounded-2xl border border-border p-4">
+                <div
+                  key={b}
+                  className="flex items-start gap-3 rounded-2xl border border-border p-4"
+                >
                   <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
                   <div className="text-sm text-secondary/90">{b}</div>
                 </div>
@@ -462,7 +548,9 @@ function LocationPageView({ location: l }: { location: Location }) {
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-xl font-semibold text-secondary">Electrical services offered in {l.city}</h2>
+            <h2 className="font-display text-xl font-semibold text-secondary">
+              Electrical services offered in {l.city}
+            </h2>
             <div className="mt-4 grid gap-2 sm:grid-cols-2">
               {services.map((s) => (
                 <Link
@@ -479,13 +567,20 @@ function LocationPageView({ location: l }: { location: Location }) {
           </div>
 
           <div className="mt-10">
-            <h2 className="font-display text-xl font-semibold text-secondary">FAQs — Electrician in {l.city}</h2>
+            <h2 className="font-display text-xl font-semibold text-secondary">
+              FAQs — Electrician in {l.city}
+            </h2>
             <div className="mt-5 space-y-3">
               {l.faqs.map((f, i) => (
-                <details key={i} className="group rounded-2xl bg-card border border-border p-5 open:shadow-elegant">
+                <details
+                  key={i}
+                  className="group rounded-2xl bg-card border border-border p-5 open:shadow-elegant"
+                >
                   <summary className="cursor-pointer font-semibold text-secondary flex items-center justify-between">
                     {f.q}
-                    <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary transition group-open:rotate-45">+</span>
+                    <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary transition group-open:rotate-45">
+                      +
+                    </span>
                   </summary>
                   <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
                 </details>
@@ -496,15 +591,20 @@ function LocationPageView({ location: l }: { location: Location }) {
 
         <aside className="lg:sticky lg:top-28 h-max space-y-6">
           <div className="rounded-3xl bg-secondary text-white p-7 shadow-elegant">
-            <div className="text-xs uppercase tracking-[0.18em] text-primary">Serving {l.city} 24/7</div>
-            <div className="mt-2 font-display text-2xl font-semibold">Call now for immediate service</div>
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">
+              Serving {l.city} 24/7
+            </div>
+            <div className="mt-2 font-display text-2xl font-semibold">
+              Call now for immediate service
+            </div>
             <div className="mt-5 space-y-3">
-              <a href={site.phoneHref} className="flex items-center justify-between rounded-2xl bg-primary text-primary-foreground px-4 py-3 font-semibold">
-                <span className="inline-flex items-center gap-2"><Phone className="h-4 w-4" /> {site.phone}</span>
-                <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href={site.whatsapp} target="_blank" rel="noopener" className="flex items-center justify-between rounded-2xl bg-white/10 border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/15">
-                <span className="inline-flex items-center gap-2"><MessageCircle className="h-4 w-4 text-[#25D366]" /> WhatsApp us</span>
+              <a
+                href={site.phoneHref}
+                className="flex items-center justify-between rounded-2xl bg-primary text-primary-foreground px-4 py-3 font-semibold"
+              >
+                <span className="inline-flex items-center gap-2">
+                  <Phone className="h-4 w-4" /> {site.phone}
+                </span>
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -524,11 +624,20 @@ function LocationPageView({ location: l }: { location: Location }) {
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-7">
-            <div className="text-xs uppercase tracking-[0.18em] text-primary">Other service areas</div>
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">
+              Other service areas
+            </div>
             <div className="mt-4 space-y-2">
               {others.map((o) => (
-                <Link key={o.slug} to="/$slug" params={{ slug: o.slug }} className="flex items-center justify-between rounded-xl border border-border px-4 py-3 hover:border-primary/40 hover:bg-surface transition">
-                  <span className="text-sm font-semibold text-secondary">Electrician in {o.city}</span>
+                <Link
+                  key={o.slug}
+                  to="/$slug"
+                  params={{ slug: o.slug }}
+                  className="flex items-center justify-between rounded-xl border border-border px-4 py-3 hover:border-primary/40 hover:bg-surface transition"
+                >
+                  <span className="text-sm font-semibold text-secondary">
+                    Electrician in {o.city}
+                  </span>
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </Link>
               ))}
@@ -537,7 +646,10 @@ function LocationPageView({ location: l }: { location: Location }) {
         </aside>
       </section>
 
-      <CtaBand title={`Need an electrician in ${l.city} right now?`} subtitle="Call or WhatsApp us — a licensed electrician is standing by 24/7." />
+      <CtaBand
+        title={`Need an electrician in ${l.city} right now?`}
+        subtitle="Call us — a licensed electrician is standing by 24/7."
+      />
     </div>
   );
 }

@@ -26,7 +26,9 @@ function NotFoundComponent() {
           The page you're looking for doesn't exist.
         </p>
         <div className="mt-6">
-          <Link to="/" className="btn-primary">Go home</Link>
+          <Link to="/" className="btn-primary">
+            Go home
+          </Link>
         </div>
       </div>
     </div>
@@ -42,10 +44,22 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-[70vh] items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold">This page didn't load</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Something went wrong. Try again or head home.</p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong. Try again or head home.
+        </p>
         <div className="mt-6 flex justify-center gap-2">
-          <button onClick={() => { router.invalidate(); reset(); }} className="btn-primary">Try again</button>
-          <a href="/" className="btn-ghost">Go home</a>
+          <button
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="btn-primary"
+          >
+            Try again
+          </button>
+          <a href="/" className="btn-ghost">
+            Go home
+          </a>
         </div>
       </div>
     </div>
@@ -57,7 +71,8 @@ const orgSchema = {
   "@type": "Electrician",
   "@id": "https://miamielectricalcontractors.com/#business",
   name: site.name,
-  image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
+  image:
+    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
   telephone: site.phone,
   email: site.email,
   url: "https://miamielectricalcontractors.com/",
@@ -70,12 +85,23 @@ const orgSchema = {
     addressCountry: "US",
   },
   geo: { "@type": "GeoCoordinates", latitude: 25.7975, longitude: -80.1912 },
-  openingHoursSpecification: [{
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    opens: "00:00", closes: "23:59",
-  }],
-  areaServed: ["Miami","Miami Beach","Coral Gables","Brickell","Downtown Miami","North Miami","South Florida"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
+  ],
+  areaServed: [
+    "Miami",
+    "Miami Beach",
+    "Coral Gables",
+    "Brickell",
+    "Downtown Miami",
+    "North Miami",
+    "South Florida",
+  ],
   priceRange: "$$",
   aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "182" },
 };
@@ -86,7 +112,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
-      { name: "description", content: "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 610-2998." },
+      {
+        name: "description",
+        content:
+          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 610-2998.",
+      },
       { name: "author", content: site.name },
       { name: "theme-color", content: "#0B1320" },
       { property: "og:site_name", content: site.name },
@@ -98,12 +128,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap",
+      },
       { rel: "preconnect", href: "https://images.unsplash.com" },
     ],
-    scripts: [
-      { type: "application/ld+json", children: JSON.stringify(orgSchema) },
-    ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(orgSchema) }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -114,8 +145,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }
