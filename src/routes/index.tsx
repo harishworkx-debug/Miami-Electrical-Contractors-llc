@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 610-2998 for a free estimate.",
+          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (786) 733-0585 for a free estimate.",
       },
       {
         property: "og:title",
@@ -353,9 +353,8 @@ function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className={`relative overflow-hidden rounded-3xl p-8 ${
-                  i % 3 === 0 ? "bg-secondary text-secondary-foreground" : "bg-surface"
-                }`}
+                className={`relative overflow-hidden rounded-3xl p-8 ${i % 3 === 0 ? "bg-secondary text-secondary-foreground" : "bg-surface"
+                  }`}
               >
                 {i % 3 === 0 && <div className="absolute inset-0 grid-bg opacity-30" />}
                 <div className="relative">

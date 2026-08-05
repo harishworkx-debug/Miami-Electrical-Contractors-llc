@@ -2,7 +2,7 @@ export const site = {
   name: "Miami Electrical Contractors LLC",
   short: "Miami Electrical Contractors LLC",
   url: "https://miamielectricalcontracting.com",
-  phone: "(305) 610-2998",
+  phone: "(786) 733-0585",
   phoneHref: "tel:+13056102998",
   address: "2121 Biscayne Blvd #1099, Miami, FL 33137",
   street: "2121 Biscayne Blvd #1099",
@@ -37,13 +37,13 @@ export type Service = {
   related: string[];
   body: string;
   group:
-    | "Repair"
-    | "Installation"
-    | "Panels & Wiring"
-    | "Lighting"
-    | "EV & Power"
-    | "Residential & Commercial"
-    | "Inspection";
+  | "Repair"
+  | "Installation"
+  | "Panels & Wiring"
+  | "Lighting"
+  | "EV & Power"
+  | "Residential & Commercial"
+  | "Inspection";
 };
 
 const WHY_US_DEFAULT = [
