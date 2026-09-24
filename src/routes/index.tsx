@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (786) 733-0585 for a free estimate.",
+          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call ((305) 679-6434 for a free estimate.",
       },
       {
         property: "og:title",
