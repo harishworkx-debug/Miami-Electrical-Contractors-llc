@@ -2,7 +2,7 @@ export const site = {
   name: "Miami Electrical Contractors LLC",
   short: "Miami Electrical Contractors LLC",
   url: "https://miamielectricalcontracting.com",
-  phone: "((305) 679-6434",
+  phone: "(305) 679-6434",
   phoneHref: "tel:+13056796434",
   address: "2121 Biscayne Blvd #1099, Miami, FL 33137",
   street: "2121 Biscayne Blvd #1099",
