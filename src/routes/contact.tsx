@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, MapPin, Clock, Mail, ArrowRight, ShieldCheck } from "lucide-react";
-import { site } from "@/lib/site";
+import { site, locations, services } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -183,6 +183,31 @@ function Contact() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
+          </div>
+
+          <div className="rounded-3xl border border-border bg-card p-8 shadow-elegant">
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">Services</div>
+            <div className="mt-4 flex flex-col gap-2">
+              {services.slice(0, 5).map((s) => (
+                <Link key={s.slug} to="/$slug" params={{ slug: s.slug }} className="text-sm font-semibold text-secondary hover:text-primary">
+                  {s.title}
+                </Link>
+              ))}
+              <Link to="/services" className="text-sm font-semibold text-primary mt-2 flex items-center gap-1">
+                View all services <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-border bg-card p-8 shadow-elegant">
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">Service Areas</div>
+            <div className="mt-4 flex flex-col gap-2">
+              {locations.slice(0, 6).map((l) => (
+                <Link key={l.slug} to="/$slug" params={{ slug: l.slug }} className="text-sm font-semibold text-secondary hover:text-primary">
+                  Electrician in {l.city}
+                </Link>
+              ))}
+            </div>
           </div>
         </aside>
       </section>

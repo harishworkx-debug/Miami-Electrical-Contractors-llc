@@ -26,20 +26,20 @@ import { CtaBand } from "@/components/site/cta-band";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
+      { title: "Electrician Miami FL | Miami Electrical Contractors LLC" },
       {
         name: "description",
         content:
-          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 679-6434 for a free estimate.",
+          "Need an electrician in Miami, FL? Miami Electrical Contractors LLC provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
       },
       {
         property: "og:title",
-        content: "Miami Electrical Contractors LLC | Electrician in Miami, FL",
+        content: "Electrician Miami FL | Miami Electrical Contractors LLC",
       },
       {
         property: "og:description",
         content:
-          "Veteran-owned Miami electricians. Residential, commercial and industrial service across South Florida. 24/7. Free estimates.",
+          "Need an electrician in Miami, FL? Miami Electrical Contractors LLC provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -195,7 +195,7 @@ function Home() {
               Veteran Owned · Licensed · Insured
             </div>
             <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02]">
-              Miami's Trusted <span className="text-gradient">Electrical Contractors</span>
+              Electrician in <span className="text-gradient">Miami, FL</span> – Electrical Contractor
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/75 leading-relaxed">
               {site.tagline.split("·")[0]} delivering residential, commercial and industrial
@@ -384,8 +384,11 @@ function Home() {
                 Services
               </div>
               <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary max-w-2xl">
-                One licensed contractor for every kind of electrical work.
+                Electrical Services in Miami, FL
               </h2>
+              <p className="mt-5 text-muted-foreground max-w-2xl">
+                From emergency electrical service and fast electrical repairs to comprehensive wiring, panel upgrades, and EV charger installations, our team handles it all. We serve both residential and commercial clients across Miami, ensuring every lighting installation, circuit breaker repair, and electrical inspection is completed safely and to code.
+              </p>
             </div>
             <Link to="/services" className="btn-ghost text-sm self-start">
               Explore all services <ArrowRight className="h-4 w-4" />
@@ -655,15 +658,18 @@ function Home() {
               Service areas
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              Where we work.
+              Serving Miami and Surrounding Areas
             </h2>
+            <p className="mt-5 text-muted-foreground max-w-2xl">
+              We proudly serve all of Miami-Dade county. Whether you need an electrician in Miami, an electrician in Coral Gables, an electrician in South Miami, or an electrician in Miami Beach, our licensed professionals are ready to help.
+            </p>
           </div>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {locations.map((l) => (
             <Link
               key={l.slug}
-              to="/areas/$slug"
+              to="/$slug"
               params={{ slug: l.slug }}
               className="group relative overflow-hidden rounded-3xl aspect-[16/10]"
             >

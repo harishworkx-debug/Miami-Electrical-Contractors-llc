@@ -87,7 +87,7 @@ function Reviews() {
               </div>
               <div className="mt-2 text-sm text-white/70">Based on 180+ Google reviews</div>
               <a
-                href="https://www.google.com/search?q=Miami+Electrical+Contractors+llc"
+                href="https://maps.app.goo.gl/Lf1RVViTtbiZb2tJ9"
                 target="_blank"
                 rel="noopener"
                 className="mt-6 inline-flex btn-primary text-sm"

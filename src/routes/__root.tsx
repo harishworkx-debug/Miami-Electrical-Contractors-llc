@@ -69,13 +69,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Electrician",
-  "@id": "https://miamielectricalcontractors.com/#business",
+  "@id": `${site.url}/#business`,
   name: site.name,
   image:
     "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
   telephone: site.phone,
   email: site.email,
-  url: "https://miamielectricalcontractors.com/",
+  url: site.url,
+  sameAs: [
+    "https://maps.app.goo.gl/Lf1RVViTtbiZb2tJ9"
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.street,
@@ -111,11 +114,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Miami Electrical Contractors LLC | Electrician in Miami, FL" },
+      { title: "Electrician Miami FL | Miami Electrical Contractors LLC" },
       {
         name: "description",
         content:
-          "Veteran-owned electrical contractor providing residential, commercial and industrial electrical services across Miami and South Florida. Available 24/7. Call (305) 679-6434.",
+          "Need an electrician in Miami, FL? Miami Electrical Contractors LLC provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
       },
       { name: "author", content: site.name },
       { name: "theme-color", content: "#0B1320" },
