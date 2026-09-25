@@ -132,9 +132,10 @@ export const services: Service[] = [
     related: [
       "electrical-repair-miami-fl",
       "circuit-breaker-repair-miami-fl",
+      "outlet-repair-miami-fl",
       "panel-upgrade-miami-fl",
     ],
-    body: "When power fails or an outlet starts sparking, minutes matter. Our emergency electrical team is on call 24 hours a day for Miami homes, condos, restaurants and offices. We arrive in a fully-stocked van, make the situation safe, then diagnose and repair the fault the first time.",
+    body: "When power fails or an outlet starts sparking, minutes matter. As a premier 24 hour electrician Miami relies on, our emergency electrical team is on call around the clock for homes, condos, restaurants and offices. If you're searching for an electrician Miami open now, we arrive in a fully-stocked van, make the situation safe, then diagnose and provide 24 hour electrical service Miami residents trust to repair the fault the first time. We are the trusted emergency electrician Miami FL calls when safety is on the line.",
   },
   {
     slug: "electrical-repair-miami-fl",
@@ -455,11 +456,12 @@ export const services: Service[] = [
       },
     ],
     related: [
-      "panel-upgrade-miami-fl",
       "electrical-installation-miami-fl",
-      "electrical-inspection-miami-fl",
+      "electrical-repair-miami-fl",
+      "lighting-installation-miami-fl",
+      "panel-upgrade-miami-fl",
     ],
-    body: "We serve Miami's most demanding operators — restaurants on Ocean Drive, offices in Brickell, retail across Coral Gables and multi-family projects across South Florida. Our commercial team works fast, safely, and to spec.",
+    body: "We serve Miami's most demanding operators. Whether you need a commercial electrician in Miami for offices, restaurants, retail build-outs, warehouses, or multi-tenant buildings, our team delivers. As a premier commercial electrical contractor Miami trusts, we handle tenant improvements, intricate lighting designs, electrical repairs, heavy-duty panels, and ongoing maintenance. If you are searching for a commercial electrician near me or comprehensive commercial electrical services Miami businesses rely on, our commercial team works fast, safely, and exactly to spec.",
   },
   {
     slug: "residential-electrician-miami-fl",

@@ -581,36 +581,105 @@ function LocationPageView({ location: l }: { location: Location }) {
             </div>
           </div>
 
-          <div className="mt-10">
-            <h2 className="font-display text-2xl font-semibold text-secondary">
-              Local Electrical Services in {l.city}
-            </h2>
-            <div className="mt-4 grid gap-2 sm:grid-cols-2">
-              {services.map((s) => (
-                <Link
-                  key={s.slug}
-                  to="/$slug"
-                  params={{ slug: s.slug }}
-                  className="flex items-center justify-between rounded-xl border border-border px-4 py-3 hover:border-primary/40 hover:bg-surface transition text-sm"
-                >
-                  <span className="text-secondary font-medium">{s.title}</span>
-                  <ArrowRight className="h-4 w-4 text-primary" />
-                </Link>
-              ))}
-            </div>
-          </div>
+          {l.slug === "electrician-miami-fl" ? (
+            <>
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Local Electrical Services in Miami
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Our licensed electricians provide comprehensive electrical solutions. Whether you need a <Link to="/electrician-miami-fl" className="underline hover:text-primary">Miami electrician</Link> for your home or an <Link to="/commercial-electrician-miami-fl" className="underline hover:text-primary">electrical contractor</Link> for a large commercial build-out, we are equipped to handle it safely and to code.
+                </p>
+              </div>
 
-          <div className="mt-10">
-            <h2 className="font-display text-2xl font-semibold text-secondary">
-              Common Electrical Problems in {l.city} Properties
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Older homes and commercial buildings in {l.city} often face electrical challenges like
-              outdated Federal Pacific panels, insufficient power for modern appliances, and
-              storm-related electrical damage. Our local electricians are experienced in resolving
-              these specific regional issues safely and up to current Florida building codes.
-            </p>
-          </div>
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Residential Electrician Services in Miami
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  As your trusted <Link to="/residential-electrician-miami-fl" className="underline hover:text-primary">residential electrician</Link>, we handle everything from new lighting and EV chargers to full home rewires. We ensure your Miami home is powered safely and efficiently.
+                </p>
+              </div>
+
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Commercial Electrician Services in Miami
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  We offer specialized <Link to="/commercial-electrician-miami-fl" className="underline hover:text-primary">commercial electrical services</Link> for Miami businesses. From retail build-outs and restaurant lighting to office panel upgrades, our <Link to="/commercial-electrician-miami-fl" className="underline hover:text-primary">commercial electricians</Link> minimize downtime and ensure compliance.
+                </p>
+              </div>
+
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Emergency Electrician in Miami
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Power outage? Sparking outlet? Our <Link to="/emergency-electrician-miami-fl" className="underline hover:text-primary">emergency electricians</Link> are available 24/7. When you need a <Link to="/emergency-electrician-miami-fl" className="underline hover:text-primary">24 hour electrician Miami</Link> trusts, we dispatch a licensed professional to restore your power quickly.
+                </p>
+              </div>
+
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Electrical Repair and Installation in Miami
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  We handle all types of <Link to="/electrical-repair-miami-fl" className="underline hover:text-primary">electrical repair</Link> and installation. From dead outlets and flickering lights to new dedicated circuits, we diagnose faults accurately and fix them permanently.
+                </p>
+              </div>
+
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Electrical Panel Upgrades and Wiring
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Outdated electrical panels are a major safety hazard. We provide professional <Link to="/panel-upgrade-miami-fl" className="underline hover:text-primary">electrical panel upgrades</Link> and complete <Link to="/electrical-wiring-miami-fl" className="underline hover:text-primary">wiring</Link> services to meet the demands of modern appliances and HVAC systems.
+                </p>
+              </div>
+
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Electricians for Miami Homes, Condos and Businesses
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  No matter the property type, our experienced team provides top-tier service. We regularly work with condo associations and property managers across the city, providing required COIs and adhering strictly to building rules.
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Local Electrical Services in {l.city}
+                </h2>
+                <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                  {services.map((s) => (
+                    <Link
+                      key={s.slug}
+                      to="/$slug"
+                      params={{ slug: s.slug }}
+                      className="flex items-center justify-between rounded-xl border border-border px-4 py-3 hover:border-primary/40 hover:bg-surface transition text-sm"
+                    >
+                      <span className="text-secondary font-medium">{s.title}</span>
+                      <ArrowRight className="h-4 w-4 text-primary" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <h2 className="font-display text-2xl font-semibold text-secondary">
+                  Common Electrical Problems in {l.city} Properties
+                </h2>
+                <p className="mt-4 text-muted-foreground">
+                  Older homes and commercial buildings in {l.city} often face electrical challenges like
+                  outdated Federal Pacific panels, insufficient power for modern appliances, and
+                  storm-related electrical damage. Our local electricians are experienced in resolving
+                  these specific regional issues safely and up to current Florida building codes.
+                </p>
+              </div>
+            </>
+          )}
 
           <div className="mt-10">
             <h2 className="font-display text-2xl font-semibold text-secondary">

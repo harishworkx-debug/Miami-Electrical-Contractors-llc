@@ -195,11 +195,11 @@ function Home() {
               Veteran Owned · Licensed · Insured
             </div>
             <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02]">
-              Electrician in <span className="text-gradient">Miami, FL</span>
+              <span className="text-gradient">Miami</span> Electrician &<br />
+              Electrical Contractor
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/75 leading-relaxed">
-              {site.tagline.split("·")[0]} delivering residential, commercial and industrial
-              electrical solutions across South Florida — 24 hours a day, 7 days a week.
+              <strong>Miami Electrical Contractors LLC</strong> is your trusted <Link to="/electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">Miami electrician</Link> and electrical contractor. We deliver expert <Link to="/residential-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">residential</Link> and <Link to="/commercial-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">commercial electrical services</Link>, plus <Link to="/emergency-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">emergency electrical services</Link> across South Florida. Count on us for fast <Link to="/electrical-repair-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">electrical repair</Link>, <Link to="/panel-upgrade-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">panel upgrades</Link>, <Link to="/electrical-wiring-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">wiring</Link>, <Link to="/lighting-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">lighting</Link>, <Link to="/ev-charger-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">EV chargers</Link>, and <Link to="/generator-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">generators</Link> — 24 hours a day, 7 days a week.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
