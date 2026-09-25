@@ -68,7 +68,9 @@ function ServicesIndex() {
               Electrical Services & Contractor in <span className="text-gradient">Miami, FL</span>
             </h1>
             <p className="mt-6 max-w-xl text-white/70 text-lg">
-              As a full-service electrical contractor in Miami, we provide comprehensive residential and commercial electrical services. From emergency electrical repairs to new installations, our licensed team is ready 24/7.
+              As a full-service electrical contractor in Miami, we provide comprehensive residential
+              and commercial electrical services. From emergency electrical repairs to new
+              installations, our licensed team is ready 24/7.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={site.phoneHref} className="btn-primary">

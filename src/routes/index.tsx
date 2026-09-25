@@ -353,8 +353,9 @@ function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className={`relative overflow-hidden rounded-3xl p-8 ${i % 3 === 0 ? "bg-secondary text-secondary-foreground" : "bg-surface"
-                  }`}
+                className={`relative overflow-hidden rounded-3xl p-8 ${
+                  i % 3 === 0 ? "bg-secondary text-secondary-foreground" : "bg-surface"
+                }`}
               >
                 {i % 3 === 0 && <div className="absolute inset-0 grid-bg opacity-30" />}
                 <div className="relative">
@@ -387,7 +388,11 @@ function Home() {
                 24/7 Electrical Services in Miami
               </h2>
               <p className="mt-5 text-muted-foreground max-w-2xl">
-                From emergency electrical service and fast electrical repairs to comprehensive wiring, panel upgrades, and EV charger installations, our team handles it all. We serve both residential and commercial clients across Miami, ensuring every lighting installation, circuit breaker repair, and electrical inspection is completed safely and to code.
+                From emergency electrical service and fast electrical repairs to comprehensive
+                wiring, panel upgrades, and EV charger installations, our team handles it all. We
+                serve both residential and commercial clients across Miami, ensuring every lighting
+                installation, circuit breaker repair, and electrical inspection is completed safely
+                and to code.
               </p>
             </div>
             <Link to="/services" className="btn-ghost text-sm self-start">
@@ -542,8 +547,8 @@ function Home() {
                 Emergency Electrician in Miami
               </h2>
               <p className="mt-3 text-muted-foreground max-w-xl">
-                Power out? Sparking outlet? We're on the way. Live dispatcher around the clock — 60-minute response almost anywhere in Miami-Dade
-                County.
+                Power out? Sparking outlet? We're on the way. Live dispatcher around the clock —
+                60-minute response almost anywhere in Miami-Dade County.
               </p>
             </div>
             <a href={site.phoneHref} className="btn-primary text-base whitespace-nowrap">
@@ -661,7 +666,9 @@ function Home() {
               Areas We Serve in Miami-Dade
             </h2>
             <p className="mt-5 text-muted-foreground max-w-2xl">
-              We proudly serve all of Miami-Dade county. Whether you need an electrician in Miami, an electrician in Coral Gables, an electrician in South Miami, or an electrician in Miami Beach, our licensed professionals are ready to help.
+              We proudly serve all of Miami-Dade county. Whether you need an electrician in Miami,
+              an electrician in Coral Gables, an electrician in South Miami, or an electrician in
+              Miami Beach, our licensed professionals are ready to help.
             </p>
           </div>
         </div>

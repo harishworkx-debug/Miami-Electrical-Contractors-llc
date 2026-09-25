@@ -38,36 +38,37 @@ export const Route = createFileRoute("/$slug")({
 
     if (loaderData.type === "service") {
       const s = loaderData.service;
-      const customMeta: Record<string, {title: string, desc: string}> = {
+      const customMeta: Record<string, { title: string; desc: string }> = {
         "emergency-electrician-miami-fl": {
           title: "24 Hour Emergency Electrician Miami FL | Electrical Service",
-          desc: "Need an electrician in Miami right now? Our electrical team provides 24/7 emergency electrical service throughout Miami-Dade. Power out? Sparking outlet? Call now."
+          desc: "Need an electrician in Miami right now? Our electrical team provides 24/7 emergency electrical service throughout Miami-Dade. Power out? Sparking outlet? Call now.",
         },
         "commercial-electrician-miami-fl": {
           title: "Commercial Electrician Miami FL | Commercial Electrical Contractor",
-          desc: "Commercial electrician in Miami providing electrical installations, code corrections, lighting systems, and electrical panels for businesses and retail."
+          desc: "Commercial electrician in Miami providing electrical installations, code corrections, lighting systems, and electrical panels for businesses and retail.",
         },
         "residential-electrician-miami-fl": {
           title: "Residential Electrician Miami FL | Electrical Services",
-          desc: "Expert residential electrician in Miami. We handle whole-home wiring, panel upgrades, lighting installations, and troubleshooting for homeowners."
+          desc: "Expert residential electrician in Miami. We handle whole-home wiring, panel upgrades, lighting installations, and troubleshooting for homeowners.",
         },
         "electrical-repair-miami-fl": {
           title: "Electrical Repair Miami FL | Local Electrician",
-          desc: "Fast, code-compliant electrical repair for outlets, switches, wiring, breakers and lighting across Miami."
+          desc: "Fast, code-compliant electrical repair for outlets, switches, wiring, breakers and lighting across Miami.",
         },
         "panel-upgrade-miami-fl": {
           title: "Electrical Panel Upgrade Miami FL | Electrician",
-          desc: "Upgrade your electrical panel in Miami. We provide safe, code-compliant panel upgrades, sub-panels, and circuit breaker replacements."
+          desc: "Upgrade your electrical panel in Miami. We provide safe, code-compliant panel upgrades, sub-panels, and circuit breaker replacements.",
         },
         "electrical-wiring-miami-fl": {
           title: "Electrical Wiring Miami FL | Electrical Contractor",
-          desc: "Complete electrical wiring and rewiring services in Miami. We safely wire new construction, additions, and remodel projects."
+          desc: "Complete electrical wiring and rewiring services in Miami. We safely wire new construction, additions, and remodel projects.",
         },
       };
-      
+
       const metaInfo = customMeta[s.slug];
       const title = metaInfo?.title || `${s.title} in Miami, FL | ${site.short}`;
-      const desc = metaInfo?.desc || `${s.short} Call ${site.phone} for 24/7 service across Miami-Dade.`;
+      const desc =
+        metaInfo?.desc || `${s.short} Call ${site.phone} for 24/7 service across Miami-Dade.`;
       const crumbs: Crumb[] = [
         { label: "Home", to: "/" },
         { label: "Services", to: "/services" },
@@ -138,7 +139,7 @@ export const Route = createFileRoute("/$slug")({
 
     const l = loaderData.location;
     const isMiami = l.slug === "electrician-miami-fl";
-    const title = isMiami 
+    const title = isMiami
       ? "Electrician Miami FL | Local Electrical Contractor"
       : `Electrician in ${l.city}, FL | ${site.short}`;
     const desc = isMiami
@@ -604,7 +605,10 @@ function LocationPageView({ location: l }: { location: Location }) {
               Common Electrical Problems in {l.city} Properties
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Older homes and commercial buildings in {l.city} often face electrical challenges like outdated Federal Pacific panels, insufficient power for modern appliances, and storm-related electrical damage. Our local electricians are experienced in resolving these specific regional issues safely and up to current Florida building codes.
+              Older homes and commercial buildings in {l.city} often face electrical challenges like
+              outdated Federal Pacific panels, insufficient power for modern appliances, and
+              storm-related electrical damage. Our local electricians are experienced in resolving
+              these specific regional issues safely and up to current Florida building codes.
             </p>
           </div>
 

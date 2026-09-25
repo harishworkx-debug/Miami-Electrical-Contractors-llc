@@ -37,13 +37,13 @@ export type Service = {
   related: string[];
   body: string;
   group:
-  | "Repair"
-  | "Installation"
-  | "Panels & Wiring"
-  | "Lighting"
-  | "EV & Power"
-  | "Residential & Commercial"
-  | "Inspection";
+    | "Repair"
+    | "Installation"
+    | "Panels & Wiring"
+    | "Lighting"
+    | "EV & Power"
+    | "Residential & Commercial"
+    | "Inspection";
 };
 
 const WHY_US_DEFAULT = [

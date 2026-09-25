@@ -189,11 +189,19 @@ function Contact() {
             <div className="text-xs uppercase tracking-[0.18em] text-primary">Services</div>
             <div className="mt-4 flex flex-col gap-2">
               {services.slice(0, 5).map((s) => (
-                <Link key={s.slug} to="/$slug" params={{ slug: s.slug }} className="text-sm font-semibold text-secondary hover:text-primary">
+                <Link
+                  key={s.slug}
+                  to="/$slug"
+                  params={{ slug: s.slug }}
+                  className="text-sm font-semibold text-secondary hover:text-primary"
+                >
                   {s.title}
                 </Link>
               ))}
-              <Link to="/services" className="text-sm font-semibold text-primary mt-2 flex items-center gap-1">
+              <Link
+                to="/services"
+                className="text-sm font-semibold text-primary mt-2 flex items-center gap-1"
+              >
                 View all services <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -203,7 +211,12 @@ function Contact() {
             <div className="text-xs uppercase tracking-[0.18em] text-primary">Service Areas</div>
             <div className="mt-4 flex flex-col gap-2">
               {locations.slice(0, 6).map((l) => (
-                <Link key={l.slug} to="/$slug" params={{ slug: l.slug }} className="text-sm font-semibold text-secondary hover:text-primary">
+                <Link
+                  key={l.slug}
+                  to="/$slug"
+                  params={{ slug: l.slug }}
+                  className="text-sm font-semibold text-secondary hover:text-primary"
+                >
                   Electrician in {l.city}
                 </Link>
               ))}

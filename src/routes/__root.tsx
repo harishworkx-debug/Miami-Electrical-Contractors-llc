@@ -76,9 +76,7 @@ const orgSchema = {
   telephone: site.phone,
   email: site.email,
   url: site.url,
-  sameAs: [
-    "https://maps.app.goo.gl/Lf1RVViTtbiZb2tJ9"
-  ],
+  sameAs: ["https://maps.app.goo.gl/Lf1RVViTtbiZb2tJ9"],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.street,
