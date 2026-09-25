@@ -75,7 +75,7 @@ const PROCESS_DEFAULT = [
 export const services: Service[] = [
   {
     slug: "emergency-electrician-miami-fl",
-    title: "Emergency Electrician",
+    title: "24 Hour Emergency Electrician",
     short:
       "24/7 emergency electrician for power outages, sparking outlets, burning smells and tripped mains across Miami.",
     hero: "24-hour emergency electrical response anywhere in Miami-Dade.",

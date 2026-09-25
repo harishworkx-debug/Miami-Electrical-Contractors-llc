@@ -26,20 +26,20 @@ import { CtaBand } from "@/components/site/cta-band";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Electrician Miami FL | Miami Electrical Contractors LLC" },
+      { title: "Electrician Miami FL | Miami Electrical Contractors" },
       {
         name: "description",
         content:
-          "Need an electrician in Miami, FL? Miami Electrical Contractors LLC provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
+          "Looking for an electrician in Miami, FL? Miami Electrical Contractors provides residential, commercial and emergency electrical services, repairs, wiring, panel upgrades and more.",
       },
       {
         property: "og:title",
-        content: "Electrician Miami FL | Miami Electrical Contractors LLC",
+        content: "Electrician Miami FL | Miami Electrical Contractors",
       },
       {
         property: "og:description",
         content:
-          "Need an electrician in Miami, FL? Miami Electrical Contractors LLC provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
+          "Looking for an electrician in Miami, FL? Miami Electrical Contractors provides residential, commercial and emergency electrical services, repairs, wiring, panel upgrades and more.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -68,7 +68,7 @@ const HERO_IMG =
 const categories = [
   {
     icon: HomeIcon,
-    title: "Residential Electrician Miami, FL",
+    title: "Residential Electrical Services",
     slug: "residential-electrician-miami-fl",
     desc: "Whole-home electrical for Miami homeowners — wiring, panels, lighting and more.",
     items: ["Panel Upgrades", "Rewires", "Lighting", "EV Chargers"],
@@ -76,7 +76,7 @@ const categories = [
   },
   {
     icon: Building2,
-    title: "Commercial Electrician Miami, FL",
+    title: "Commercial Electrical Services",
     slug: "commercial-electrician-miami-fl",
     desc: "Design-build electrical for offices, retail, restaurants and multi-tenant buildings.",
     items: ["Tenant Build-Outs", "Emergency Lighting", "Signage", "Maintenance"],
@@ -84,7 +84,7 @@ const categories = [
   },
   {
     icon: Factory,
-    title: "Electrical Installation Miami, FL",
+    title: "Electrical Repair & Installation",
     slug: "electrical-installation-miami-fl",
     desc: "Professional installations for panels, sub-panels, appliances and full remodels.",
     items: ["Sub-Panels", "Appliance Circuits", "Remodels", "New Construction"],
@@ -195,7 +195,7 @@ function Home() {
               Veteran Owned · Licensed · Insured
             </div>
             <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02]">
-              Electrician in <span className="text-gradient">Miami, FL</span> – Electrical Contractor
+              Electrician in <span className="text-gradient">Miami, FL</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/75 leading-relaxed">
               {site.tagline.split("·")[0]} delivering residential, commercial and industrial
@@ -302,7 +302,7 @@ function Home() {
               Why choose us
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              The electrical standard for Miami's most demanding clients.
+              Why Choose Miami Electrical Contractors
             </h2>
             <p className="mt-5 text-muted-foreground max-w-lg">
               We're a veteran-owned electrical contractor built for the way South Florida actually
@@ -384,7 +384,7 @@ function Home() {
                 Services
               </div>
               <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary max-w-2xl">
-                Electrical Services in Miami, FL
+                24/7 Electrical Services in Miami
               </h2>
               <p className="mt-5 text-muted-foreground max-w-2xl">
                 From emergency electrical service and fast electrical repairs to comprehensive wiring, panel upgrades, and EV charger installations, our team handles it all. We serve both residential and commercial clients across Miami, ensuring every lighting installation, circuit breaker repair, and electrical inspection is completed safely and to code.
@@ -417,11 +417,11 @@ function Home() {
                   </div>
                 </div>
                 <div className="p-7">
-                  <h3 className="font-display text-2xl font-semibold text-secondary group-hover:text-primary transition">
+                  <h2 className="font-display text-2xl font-semibold text-secondary group-hover:text-primary transition">
                     <Link to="/$slug" params={{ slug }} className="hover:text-primary">
                       {title}
                     </Link>
-                  </h3>
+                  </h2>
                   <p className="mt-3 text-sm text-muted-foreground">{desc}</p>
                   <ul className="mt-5 grid grid-cols-2 gap-2 text-sm">
                     {items.map((it) => (
@@ -538,11 +538,11 @@ function Home() {
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                 <AlertTriangle className="h-3.5 w-3.5" /> 24/7 Emergency
               </div>
-              <h3 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-secondary">
-                Power out? Sparking outlet? We're on the way.
-              </h3>
+              <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-secondary">
+                Emergency Electrician in Miami
+              </h2>
               <p className="mt-3 text-muted-foreground max-w-xl">
-                Live dispatcher around the clock — 60-minute response almost anywhere in Miami-Dade
+                Power out? Sparking outlet? We're on the way. Live dispatcher around the clock — 60-minute response almost anywhere in Miami-Dade
                 County.
               </p>
             </div>
@@ -625,7 +625,7 @@ function Home() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">FAQ</div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              Common questions from our Miami customers.
+              Frequently Asked Questions
             </h2>
             <p className="mt-5 text-muted-foreground">
               Don't see your question? Call {site.phone} — a licensed electrician answers 24/7.
@@ -658,7 +658,7 @@ function Home() {
               Service areas
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              Serving Miami and Surrounding Areas
+              Areas We Serve in Miami-Dade
             </h2>
             <p className="mt-5 text-muted-foreground max-w-2xl">
               We proudly serve all of Miami-Dade county. Whether you need an electrician in Miami, an electrician in Coral Gables, an electrician in South Miami, or an electrician in Miami Beach, our licensed professionals are ready to help.

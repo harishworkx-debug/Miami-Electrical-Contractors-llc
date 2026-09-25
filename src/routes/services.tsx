@@ -7,11 +7,11 @@ import { Breadcrumbs, breadcrumbSchema } from "@/components/site/breadcrumbs";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Electrical Services in Miami, FL | Miami Electrical Contractors LLC" },
+      { title: "Electrical Contractor Miami FL | Miami Electrical Services" },
       {
         name: "description",
         content:
-          "Full-service electrical contractor in Miami, FL — emergency repair, panel upgrades, wiring, lighting, EV chargers, generators, commercial and residential electrical service.",
+          "Looking for an electrical contractor in Miami? We provide comprehensive residential and commercial electrical services, repairs, wiring, and panel upgrades.",
       },
       {
         property: "og:title",
@@ -65,12 +65,10 @@ function ServicesIndex() {
               Our Services
             </div>
             <h1 className="mt-5 font-display text-5xl md:text-6xl font-semibold leading-[1.05]">
-              Every kind of <span className="text-gradient">electrical work</span> — one licensed
-              contractor.
+              Electrical Services & Contractor in <span className="text-gradient">Miami, FL</span>
             </h1>
             <p className="mt-6 max-w-xl text-white/70 text-lg">
-              From single outlets to full building services, we deliver electrical work that's
-              clean, code-compliant, and built to last across Miami and South Florida.
+              As a full-service electrical contractor in Miami, we provide comprehensive residential and commercial electrical services. From emergency electrical repairs to new installations, our licensed team is ready 24/7.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={site.phoneHref} className="btn-primary">
@@ -128,6 +126,9 @@ function ServicesIndex() {
                             <CheckCircle2 className="h-4 w-4 text-primary" /> {b}
                           </div>
                         ))}
+                      </div>
+                      <div className="mt-5 font-semibold text-primary text-sm group-hover:underline">
+                        → Learn about {s.title.toLowerCase()} in Miami
                       </div>
                     </div>
                   </Link>
