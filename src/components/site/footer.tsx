@@ -20,11 +20,7 @@ export function Footer() {
                 <Zap className="h-6 w-6" fill="currentColor" />
               </div>
               <div className="font-display text-lg font-semibold tracking-tight">
-                Miami Electrical
-                <br />
-                <span className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Contractors LLC
-                </span>
+                Miami Electrician
               </div>
             </div>
             <p className="mt-6 text-sm text-white/70 max-w-xs">
@@ -120,9 +116,6 @@ export function Footer() {
             </Link>
             <Link to="/about" className="hover:text-white">
               About
-            </Link>
-            <Link to="/reviews" className="hover:text-white">
-              Reviews
             </Link>
             <Link to="/contact" className="hover:text-white">
               Contact

@@ -26,20 +26,20 @@ import { CtaBand } from "@/components/site/cta-band";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Electrician Miami FL | Miami Electrical Contractors" },
+      { title: "Electrician Miami FL | Miami Electrician" },
       {
         name: "description",
         content:
-          "Looking for an electrician in Miami, FL? Miami Electrical Contractors provides residential, commercial and emergency electrical services, repairs, wiring, panel upgrades and more.",
+          "Looking for an electrician in Miami, FL? Miami Electrician provides residential, commercial and emergency electrical services, repairs, wiring, panel upgrades and more.",
       },
       {
         property: "og:title",
-        content: "Electrician Miami FL | Miami Electrical Contractors",
+        content: "Electrician Miami FL | Miami Electrician",
       },
       {
         property: "og:description",
         content:
-          "Looking for an electrician in Miami, FL? Miami Electrical Contractors provides residential, commercial and emergency electrical services, repairs, wiring, panel upgrades and more.",
+          "Looking for an electrician in Miami, FL? Miami Electrician provides residential, commercial and emergency electrical services, repairs, wiring, panel upgrades and more.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -199,7 +199,7 @@ function Home() {
               Electrical Contractor
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/75 leading-relaxed">
-              <strong>Miami Electrical Contractors LLC</strong> is your trusted <Link to="/electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">Miami electrician</Link> and electrical contractor. We deliver expert <Link to="/residential-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">residential</Link> and <Link to="/commercial-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">commercial electrical services</Link>, plus <Link to="/emergency-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">emergency electrical services</Link> across South Florida. Count on us for fast <Link to="/electrical-repair-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">electrical repair</Link>, <Link to="/panel-upgrade-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">panel upgrades</Link>, <Link to="/electrical-wiring-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">wiring</Link>, <Link to="/lighting-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">lighting</Link>, <Link to="/ev-charger-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">EV chargers</Link>, and <Link to="/generator-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">generators</Link> — 24 hours a day, 7 days a week.
+              <strong>Miami Electrician</strong> is your trusted <Link to="/electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">Miami electrician</Link> and electrical contractor. We deliver expert <Link to="/residential-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">residential</Link> and <Link to="/commercial-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">commercial electrical services</Link>, plus <Link to="/emergency-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">emergency electrical services</Link> across South Florida. Count on us for fast <Link to="/electrical-repair-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">electrical repair</Link>, <Link to="/panel-upgrade-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">panel upgrades</Link>, <Link to="/electrical-wiring-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">wiring</Link>, <Link to="/lighting-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">lighting</Link>, <Link to="/ev-charger-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">EV chargers</Link>, and <Link to="/generator-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">generators</Link> — 24 hours a day, 7 days a week.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -302,7 +302,7 @@ function Home() {
               Why choose us
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              Why Choose Miami Electrical Contractors
+              Why Choose Miami Electrician
             </h2>
             <p className="mt-5 text-muted-foreground max-w-lg">
               We're a veteran-owned electrical contractor built for the way South Florida actually
@@ -604,9 +604,6 @@ function Home() {
               <div className="mt-1 text-sm text-white/70">
                 Based on 180+ verified Google reviews
               </div>
-              <Link to="/reviews" className="mt-5 inline-flex btn-primary text-sm">
-                Read all reviews
-              </Link>
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -737,7 +734,7 @@ function Home() {
           </div>
           <div className="overflow-hidden rounded-3xl border border-border shadow-elegant">
             <iframe
-              title="Miami Electrical Contractors LLC map"
+              title="Miami Electrician map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1836064538884!2d-80.19118068897681!3d25.797516077234835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b70b8cba41cd%3A0xba7837b78c47a537!2sMiami%20Electrical%20Contractors%20llc!5e0!3m2!1sen!2sin!4v1784981444597!5m2!1sen!2sin"
               width="100%"
               height="450"

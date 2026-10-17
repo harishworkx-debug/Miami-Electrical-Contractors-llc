@@ -112,11 +112,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Electrician Miami FL | Miami Electrical Contractors LLC" },
+      { title: "Electrician Miami FL | Miami Electrician" },
       {
         name: "description",
         content:
-          "Need an electrician in Miami, FL? Miami Electrical Contractors LLC provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
+          "Need an electrician in Miami, FL? Miami Electrician provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
       },
       { name: "author", content: site.name },
       { name: "theme-color", content: "#0B1320" },

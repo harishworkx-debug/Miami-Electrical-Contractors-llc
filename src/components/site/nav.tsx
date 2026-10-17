@@ -9,7 +9,6 @@ const primaryLinks = [
 ] as const;
 
 const tailLinks = [
-  { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -66,11 +65,8 @@ export function Nav() {
               <span className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />
             </div>
             <div className="leading-tight">
-              <div className="font-display font-semibold tracking-tight text-secondary text-sm md:text-base">
-                Miami Electrical
-              </div>
-              <div className="text-[10px] md:text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                Contractors LLC
+              <div className="font-display font-semibold tracking-tight text-secondary text-base md:text-lg">
+                Miami Electrician
               </div>
             </div>
           </Link>

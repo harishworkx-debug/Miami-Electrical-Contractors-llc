@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Learn about Miami Electrical Contractors LLC, a veteran-owned electrical company serving residential, commercial and industrial clients throughout South Florida.",
+          "Learn about Miami Electrician, a veteran-owned electrical company serving residential, commercial and industrial clients throughout South Florida.",
       },
       { property: "og:title", content: `About ${site.name}` },
       {

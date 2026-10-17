@@ -10,7 +10,7 @@ export const Route = createFileRoute("/reviews")({
       {
         name: "description",
         content:
-          "Read verified customer reviews and discover why homeowners and businesses trust Miami Electrical Contractors LLC.",
+          "Read verified customer reviews and discover why homeowners and businesses trust Miami Electrician.",
       },
       { property: "og:title", content: `Customer Reviews | ${site.name}` },
       {

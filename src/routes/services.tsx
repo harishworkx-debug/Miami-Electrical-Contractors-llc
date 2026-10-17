@@ -15,7 +15,7 @@ export const Route = createFileRoute("/services")({
       },
       {
         property: "og:title",
-        content: "Electrical Services in Miami, FL | Miami Electrical Contractors LLC",
+        content: "Electrical Services in Miami, FL | Miami Electrician",
       },
       {
         property: "og:description",
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/services")({
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Electrical Services in Miami, FL | Miami Electrical Contractors LLC",
+        content: "Electrical Services in Miami, FL | Miami Electrician",
       },
       {
         name: "twitter:description",

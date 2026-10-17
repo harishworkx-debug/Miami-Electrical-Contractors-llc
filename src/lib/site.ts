@@ -1,6 +1,6 @@
 export const site = {
-  name: "Miami Electrical Contractors LLC",
-  short: "Miami Electrical Contractors LLC",
+  name: "Miami Electrician",
+  short: "Miami Electrician",
   url: "https://www.miamielectricalcontracting.com",
   phone: "(305) 679-6434",
   phoneHref: "tel:+13056796434",
@@ -10,7 +10,7 @@ export const site = {
   state: "FL",
   zip: "33137",
   hours: "Open 24 Hours · Mon – Sun",
-  email: "estimates@miamielectricalcontractors.com",
+  email: "estimates@miamielectrician.com",
   tagline: "Veteran-Owned Electrical Contractor · Miami, FL",
 };
 
@@ -1033,7 +1033,7 @@ export const locations: Location[] = [
     region: "Miami, FL",
     hero: "Miami's veteran-owned electrical contractor — 24/7 service across the city.",
     intro:
-      "Miami Electrical Contractors LLC is a licensed, veteran-owned electrical contractor headquartered in Miami, FL. We serve every neighborhood in the city — from Downtown high-rises and Brickell condos to single-family homes in the Grove and warehouses off the Palmetto — around the clock.",
+      "Miami Electrician is a licensed, veteran-owned electrical contractor headquartered in Miami, FL. We serve every neighborhood in the city — from Downtown high-rises and Brickell condos to single-family homes in the Grove and warehouses off the Palmetto — around the clock.",
     landmarks: [
       "Wynwood",
       "Design District",
@@ -1397,7 +1397,7 @@ export const reviews = [
 export const generalFaqs = [
   {
     q: "Are you licensed and insured in Florida?",
-    a: "Yes. Miami Electrical Contractors LLC is a fully licensed Florida electrical contractor, insured, and veteran-owned.",
+    a: "Yes. Miami Electrician is a fully licensed Florida electrical contractor, insured, and veteran-owned.",
   },
   {
     q: "Do you offer 24-hour emergency service?",

@@ -174,7 +174,7 @@ function Contact() {
 
           <div className="overflow-hidden rounded-3xl border border-border shadow-elegant">
             <iframe
-              title="Miami Electrical Contractors LLC map"
+              title="Miami Electrician map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1836064538884!2d-80.19118068897681!3d25.797516077234835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b70b8cba41cd%3A0xba7837b78c47a537!2sMiami%20Electrical%20Contractors%20llc!5e0!3m2!1sen!2sin!4v1784981444597!5m2!1sen!2sin"
               width="100%"
               height="500"
