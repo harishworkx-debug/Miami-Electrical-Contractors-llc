@@ -588,7 +588,7 @@ function LocationPageView({ location: l }: { location: Location }) {
                   Local Electrical Services in Miami
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Our licensed electricians provide comprehensive electrical solutions. Whether you need a <Link to="/electrician-miami-fl" className="underline hover:text-primary">Miami electrician</Link> for your home or an <Link to="/commercial-electrician-miami-fl" className="underline hover:text-primary">electrical contractor</Link> for a large commercial build-out, we are equipped to handle it safely and to code.
+                  Our licensed electricians provide comprehensive electrical solutions. Whether you need a <Link to="/$slug" params={{ slug: "electrician-miami-fl" }} className="underline hover:text-primary">Miami electrician</Link> for your home or an <Link to="/$slug" params={{ slug: "commercial-electrician-miami-fl" }} className="underline hover:text-primary">electrical contractor</Link> for a large commercial build-out, we are equipped to handle it safely and to code.
                 </p>
               </div>
 
@@ -597,7 +597,7 @@ function LocationPageView({ location: l }: { location: Location }) {
                   Residential Electrician Services in Miami
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  As your trusted <Link to="/residential-electrician-miami-fl" className="underline hover:text-primary">residential electrician</Link>, we handle everything from new lighting and EV chargers to full home rewires. We ensure your Miami home is powered safely and efficiently.
+                  As your trusted <Link to="/$slug" params={{ slug: "residential-electrician-miami-fl" }} className="underline hover:text-primary">residential electrician</Link>, we handle everything from new lighting and EV chargers to full home rewires. We ensure your Miami home is powered safely and efficiently.
                 </p>
               </div>
 
@@ -606,7 +606,7 @@ function LocationPageView({ location: l }: { location: Location }) {
                   Commercial Electrician Services in Miami
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  We offer specialized <Link to="/commercial-electrician-miami-fl" className="underline hover:text-primary">commercial electrical services</Link> for Miami businesses. From retail build-outs and restaurant lighting to office panel upgrades, our <Link to="/commercial-electrician-miami-fl" className="underline hover:text-primary">commercial electricians</Link> minimize downtime and ensure compliance.
+                  We offer specialized <Link to="/$slug" params={{ slug: "commercial-electrician-miami-fl" }} className="underline hover:text-primary">commercial electrical services</Link> for Miami businesses. From retail build-outs and restaurant lighting to office panel upgrades, our <Link to="/$slug" params={{ slug: "commercial-electrician-miami-fl" }} className="underline hover:text-primary">commercial electricians</Link> minimize downtime and ensure compliance.
                 </p>
               </div>
 
@@ -615,7 +615,7 @@ function LocationPageView({ location: l }: { location: Location }) {
                   Emergency Electrician in Miami
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Power outage? Sparking outlet? Our <Link to="/emergency-electrician-miami-fl" className="underline hover:text-primary">emergency electricians</Link> are available 24/7. When you need a <Link to="/emergency-electrician-miami-fl" className="underline hover:text-primary">24 hour electrician Miami</Link> trusts, we dispatch a licensed professional to restore your power quickly.
+                  Power outage? Sparking outlet? Our <Link to="/$slug" params={{ slug: "emergency-electrician-miami-fl" }} className="underline hover:text-primary">emergency electricians</Link> are available 24/7. When you need a <Link to="/$slug" params={{ slug: "emergency-electrician-miami-fl" }} className="underline hover:text-primary">24 hour electrician Miami</Link> trusts, we dispatch a licensed professional to restore your power quickly.
                 </p>
               </div>
 
@@ -624,7 +624,7 @@ function LocationPageView({ location: l }: { location: Location }) {
                   Electrical Repair and Installation in Miami
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  We handle all types of <Link to="/electrical-repair-miami-fl" className="underline hover:text-primary">electrical repair</Link> and installation. From dead outlets and flickering lights to new dedicated circuits, we diagnose faults accurately and fix them permanently.
+                  We handle all types of <Link to="/$slug" params={{ slug: "electrical-repair-miami-fl" }} className="underline hover:text-primary">electrical repair</Link> and installation. From dead outlets and flickering lights to new dedicated circuits, we diagnose faults accurately and fix them permanently.
                 </p>
               </div>
 
@@ -633,7 +633,7 @@ function LocationPageView({ location: l }: { location: Location }) {
                   Electrical Panel Upgrades and Wiring
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Outdated electrical panels are a major safety hazard. We provide professional <Link to="/panel-upgrade-miami-fl" className="underline hover:text-primary">electrical panel upgrades</Link> and complete <Link to="/electrical-wiring-miami-fl" className="underline hover:text-primary">wiring</Link> services to meet the demands of modern appliances and HVAC systems.
+                  Outdated electrical panels are a major safety hazard. We provide professional <Link to="/$slug" params={{ slug: "panel-upgrade-miami-fl" }} className="underline hover:text-primary">electrical panel upgrades</Link> and complete <Link to="/$slug" params={{ slug: "electrical-wiring-miami-fl" }} className="underline hover:text-primary">wiring</Link> services to meet the demands of modern appliances and HVAC systems.
                 </p>
               </div>
 
@@ -727,8 +727,8 @@ function LocationPageView({ location: l }: { location: Location }) {
 
           <div className="overflow-hidden rounded-3xl border border-border shadow-elegant">
             <iframe
-              title={`Map of ${l.city}`}
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1836064538884!2d-80.19118068897681!3d25.797516077234835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b70b8cba41cd%3A0xba7837b78c47a537!2sMiami%20Electrical%20Contractors%20llc!5e0!3m2!1sen!2sin!4v1784981444597!5m2!1sen!2sin"
+              title={`Map of ${l.city}, FL`}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(l.city + ", FL")}&t=&z=12&ie=UTF8&iwloc=&output=embed`}
               width="100%"
               height="320"
               style={{ border: 0 }}

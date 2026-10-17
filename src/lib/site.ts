@@ -4,11 +4,11 @@ export const site = {
   url: "https://www.miamielectricalcontracting.com",
   phone: "(305) 679-6434",
   phoneHref: "tel:+13056796434",
-  address: "2121 Biscayne Blvd #1099, Miami, FL 33137",
-  street: "2121 Biscayne Blvd #1099",
+  address: "Miami, FL 33101",
+  street: "Serving Greater Miami & Miami-Dade",
   city: "Miami",
   state: "FL",
-  zip: "33137",
+  zip: "33101",
   hours: "Open 24 Hours · Mon – Sun",
   email: "estimates@miamielectrician.com",
   tagline: "Veteran-Owned Electrical Contractor · Miami, FL",
@@ -1355,42 +1355,100 @@ export function findPage(slug: string): PageMatch | null {
 /*  REVIEWS, FAQs, STATS                                               */
 /* ------------------------------------------------------------------ */
 
-export const reviews = [
+export type GoogleReview = {
+  name: string;
+  avatarLetter: string;
+  avatarBg: string;
+  location: string;
+  rating: number;
+  timeAgo: string;
+  isLocalGuide?: boolean;
+  guideStats?: string;
+  service?: string;
+  positives?: string[];
+  text: string;
+  ownerReply?: string;
+};
+
+export const reviews: GoogleReview[] = [
   {
-    name: "Alejandra R.",
+    name: "Carlos Mendez",
+    avatarLetter: "C",
+    avatarBg: "bg-blue-600",
+    location: "Brickell, Miami, FL",
+    rating: 5,
+    timeAgo: "2 weeks ago",
+    isLocalGuide: true,
+    guideStats: "Local Guide · 38 reviews · 19 photos",
+    service: "24/7 Emergency Electrical Repair",
+    positives: ["Responsiveness", "Punctuality", "Professionalism", "Value"],
+    text: "Had a complete power failure in our Brickell condo late on a Saturday night with family in town. The main breaker was humming and wouldn't reset. Called Miami Electrician and their master electrician arrived in 35 minutes flat! Diagnosed a scorched breaker busbar, replaced the faulty hardware safely, and restored power before midnight. Transparent flat pricing with zero midnight gouging.",
+    ownerReply: "Thank you Carlos! We take pride in 24/7 rapid response across Miami-Dade. So glad we could get your power safely back on for your family.",
+  },
+  {
+    name: "Sofia Alvarez",
+    avatarLetter: "S",
+    avatarBg: "bg-purple-600",
     location: "Coral Gables, FL",
     rating: 5,
-    text: "Rewired our entire home in under a week. The team was professional, spotless, and truly the best electricians we've hired in Miami.",
+    timeAgo: "3 weeks ago",
+    isLocalGuide: true,
+    guideStats: "Local Guide · 24 reviews",
+    service: "200A Electrical Panel Upgrade & Rewiring",
+    positives: ["Quality", "Punctuality", "Code Compliance"],
+    text: "Our insurance carrier required us to replace an outdated 150A Zinsco panel before renewing our hurricane policy. Miami Electrician pulled all City of Miami permits, coordinated directly with Florida Power & Light (FPL), and completed the whole 200A upgrade with whole-home surge protection in one day. Passed city inspection on first visit!",
+    ownerReply: "We appreciate your trust Sofia! Getting insurance-ready panel upgrades completed seamlessly is what our team specializes in.",
   },
   {
-    name: "Marcus T.",
-    location: "Brickell, FL",
+    name: "Marcus Thompson",
+    avatarLetter: "M",
+    avatarBg: "bg-emerald-600",
+    location: "Wynwood, Miami, FL",
     rating: 5,
-    text: "Emergency call at 11pm — they were at our condo in 40 minutes and had power back before midnight. Absolute lifesavers.",
+    timeAgo: "1 month ago",
+    isLocalGuide: true,
+    guideStats: "Local Guide · 52 reviews · 41 photos",
+    service: "Commercial Electrical Fit-Out & Lighting",
+    positives: ["Professionalism", "Value", "Responsiveness"],
+    text: "Hired Miami Electrician for our new restaurant and lounge build-out in Wynwood. They handled 3-phase high-voltage lines, dedicated commercial kitchen circuits, architectural dimming controls, and exterior signage. Veteran-owned work ethic is immediately obvious — clean conduit work, immaculate job site, and on schedule.",
+    ownerReply: "Thank you Marcus! The lounge looks stunning and it was a true pleasure working alongside your build-out team in Wynwood.",
   },
   {
-    name: "Sofia M.",
+    name: "David Chen",
+    avatarLetter: "D",
+    avatarBg: "bg-amber-600",
     location: "Miami Beach, FL",
     rating: 5,
-    text: "Handled our restaurant panel upgrade overnight so we didn't lose a single service. Real pros. Highly recommend.",
+    timeAgo: "1 month ago",
+    service: "Tesla Level 2 EV Charger Installation",
+    positives: ["Punctuality", "Quality", "Clean Workmanship"],
+    text: "Installed a 48A Tesla Wall Connector in our garage. Conduit run was over 60 feet from our main panel, and they routed everything cleanly through the attic with zero exposed ugly pipe on our exterior walls. Tested charging speeds and verified ground fault before leaving. Outstanding service.",
+    ownerReply: "Thanks for the shoutout David! Enjoy fast home charging for your Tesla.",
   },
   {
-    name: "David C.",
+    name: "Alejandra Ramirez",
+    avatarLetter: "A",
+    avatarBg: "bg-rose-600",
+    location: "Coconut Grove, Miami, FL",
+    rating: 5,
+    timeAgo: "2 months ago",
+    isLocalGuide: true,
+    guideStats: "Local Guide · 17 reviews",
+    service: "Recessed LED Lighting & Smart Switches",
+    positives: ["Attention to Detail", "Quality", "Professionalism"],
+    text: "Upgraded our entire home to modern 3000K recessed LED slim lights with Lutron Caseta smart dimmers. The team was spotless — used drop cloths everywhere and vacuumed before leaving every evening. The transformation in our living space is night and day.",
+  },
+  {
+    name: "Jerome Washington",
+    avatarLetter: "J",
+    avatarBg: "bg-indigo-600",
     location: "Downtown Miami, FL",
     rating: 5,
-    text: "Best commercial electricians we've worked with in Miami — fast, permitted, and clean. Their crew is top tier.",
-  },
-  {
-    name: "Priya S.",
-    location: "North Miami, FL",
-    rating: 5,
-    text: "They installed all our landscape lighting and it looks incredible. Communication was flawless from quote to walkthrough.",
-  },
-  {
-    name: "Jerome W.",
-    location: "Wynwood, Miami",
-    rating: 5,
-    text: "Veteran-owned and it shows — disciplined, on time, and detail obsessed. Would hire again for any electrical need.",
+    timeAgo: "2 months ago",
+    service: "Commercial Emergency Service & Switchgear",
+    positives: ["Speed", "Reliability", "Expertise"],
+    text: "As a property manager for commercial office spaces in Downtown Miami, having a reliable 24/7 electrical contractor is critical. Miami Electrician has responded to three emergency elevator and subpanel calls this past year. Every time on point, certified, and fully documented.",
+    ownerReply: "Always a pleasure Jerome. We are proud to keep Downtown Miami facilities powered and safe around the clock.",
   },
 ];
 

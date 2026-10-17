@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { site, services, locations, reviews, generalFaqs, stats, trustBadges } from "@/lib/site";
 import { CtaBand } from "@/components/site/cta-band";
+import { GoogleReviewsSection } from "@/components/site/google-reviews";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -199,7 +200,7 @@ function Home() {
               Electrical Contractor
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/75 leading-relaxed">
-              <strong>Miami Electrician</strong> is your trusted <Link to="/electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">Miami electrician</Link> and electrical contractor. We deliver expert <Link to="/residential-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">residential</Link> and <Link to="/commercial-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">commercial electrical services</Link>, plus <Link to="/emergency-electrician-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">emergency electrical services</Link> across South Florida. Count on us for fast <Link to="/electrical-repair-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">electrical repair</Link>, <Link to="/panel-upgrade-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">panel upgrades</Link>, <Link to="/electrical-wiring-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">wiring</Link>, <Link to="/lighting-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">lighting</Link>, <Link to="/ev-charger-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">EV chargers</Link>, and <Link to="/generator-installation-miami-fl" className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">generators</Link> — 24 hours a day, 7 days a week.
+              <strong>Miami Electrician</strong> is your trusted <Link to="/$slug" params={{ slug: "electrician-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">Miami electrician</Link> and electrical contractor. We deliver expert <Link to="/$slug" params={{ slug: "residential-electrician-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">residential</Link> and <Link to="/$slug" params={{ slug: "commercial-electrician-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">commercial electrical services</Link>, plus <Link to="/$slug" params={{ slug: "emergency-electrician-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">emergency electrical services</Link> across South Florida. Count on us for fast <Link to="/$slug" params={{ slug: "electrical-repair-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">electrical repair</Link>, <Link to="/$slug" params={{ slug: "panel-upgrade-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">panel upgrades</Link>, <Link to="/$slug" params={{ slug: "electrical-wiring-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">wiring</Link>, <Link to="/$slug" params={{ slug: "lighting-installation-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">lighting</Link>, <Link to="/$slug" params={{ slug: "ev-charger-installation-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">EV chargers</Link>, and <Link to="/$slug" params={{ slug: "generator-installation-miami-fl" }} className="text-white hover:text-primary underline decoration-white/30 underline-offset-4">generators</Link> — 24 hours a day, 7 days a week.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -587,39 +588,7 @@ function Home() {
       </section>
 
       {/* Reviews + Google rating */}
-      <section className="container-x py-24">
-        <div className="grid gap-10 lg:grid-cols-[1fr_2fr] items-start">
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Reviews
-            </div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              Loved by South Florida.
-            </h2>
-            <div className="mt-6 rounded-3xl bg-secondary text-white p-6">
-              <div className="flex items-center gap-2">
-                <Stars />
-                <span className="text-lg font-semibold">5.0</span>
-              </div>
-              <div className="mt-1 text-sm text-white/70">
-                Based on 180+ verified Google reviews
-              </div>
-            </div>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {reviews.slice(0, 4).map((r) => (
-              <div key={r.name} className="rounded-3xl border border-border bg-card p-6">
-                <Stars />
-                <p className="mt-4 text-secondary/90 leading-relaxed">"{r.text}"</p>
-                <div className="mt-5 text-sm">
-                  <div className="font-semibold text-secondary">{r.name}</div>
-                  <div className="text-muted-foreground">{r.location}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GoogleReviewsSection limit={4} />
 
       {/* FAQ */}
       <section className="bg-surface py-24">
@@ -707,18 +676,18 @@ function Home() {
         <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] items-start">
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Visit us
+              Service Area
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold leading-tight text-secondary">
-              Based on Biscayne Blvd — serving all of South Florida.
+              Serving Greater Miami & All of South Florida.
             </h2>
             <div className="mt-6 space-y-3 text-secondary/80">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />{" "}
                 <span>
-                  {site.street}
-                  <br />
                   {site.city}, {site.state} {site.zip}
+                  <br />
+                  <span className="text-sm text-secondary/70">{site.street}</span>
                 </span>
               </div>
               <div className="flex items-start gap-3">
@@ -734,8 +703,8 @@ function Home() {
           </div>
           <div className="overflow-hidden rounded-3xl border border-border shadow-elegant">
             <iframe
-              title="Miami Electrician map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1836064538884!2d-80.19118068897681!3d25.797516077234835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b70b8cba41cd%3A0xba7837b78c47a537!2sMiami%20Electrical%20Contractors%20llc!5e0!3m2!1sen!2sin!4v1784981444597!5m2!1sen!2sin"
+              title="Miami, FL service area map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.38942699257!2d-80.29949851624647!3d25.78254531238459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
               width="100%"
               height="450"
               style={{ border: 0 }}

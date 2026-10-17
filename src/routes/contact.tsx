@@ -144,9 +144,9 @@ function Contact() {
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 text-primary mt-0.5" />
                 <span>
-                  {site.street}
-                  <br />
                   {site.city}, {site.state} {site.zip}
+                  <br />
+                  <span className="text-white/70">{site.street}</span>
                 </span>
               </li>
               <li className="flex gap-3">
@@ -174,8 +174,8 @@ function Contact() {
 
           <div className="overflow-hidden rounded-3xl border border-border shadow-elegant">
             <iframe
-              title="Miami Electrician map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1836064538884!2d-80.19118068897681!3d25.797516077234835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b70b8cba41cd%3A0xba7837b78c47a537!2sMiami%20Electrical%20Contractors%20llc!5e0!3m2!1sen!2sin!4v1784981444597!5m2!1sen!2sin"
+              title="Miami, FL service area map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.38942699257!2d-80.29949851624647!3d25.78254531238459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
               width="100%"
               height="500"
               style={{ border: 0 }}

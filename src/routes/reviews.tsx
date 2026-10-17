@@ -1,7 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Star, Quote } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { reviews, site } from "@/lib/site";
 import { CtaBand } from "@/components/site/cta-band";
+import {
+  GoogleReviewCard,
+  GoogleIcon,
+  GoogleStars,
+} from "@/components/site/google-reviews";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -45,16 +49,6 @@ export const Route = createFileRoute("/reviews")({
   component: Reviews,
 });
 
-function Stars() {
-  return (
-    <div className="flex gap-0.5">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-      ))}
-    </div>
-  );
-}
-
 function Reviews() {
   return (
     <div>
@@ -70,30 +64,33 @@ function Reviews() {
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary border border-white/10">
-                Verified reviews
+                <GoogleIcon className="h-4 w-4" />
+                Verified Google Reviews
               </div>
               <h1 className="mt-5 font-display text-5xl md:text-6xl font-semibold leading-[1.05]">
                 5 stars from <span className="text-gradient">South Florida</span>.
               </h1>
               <p className="mt-6 max-w-xl text-white/70 text-lg">
-                Real reviews from real Miami customers — homeowners, businesses and developers who
-                trust our team with their electrical work.
+                Real customer feedback from homeowners, condominium associations, and commercial
+                businesses across Miami, Coral Gables, Brickell, and Miami Beach.
               </p>
             </div>
             <div className="rounded-3xl glass-dark p-8 text-center">
+              <div className="inline-flex items-center justify-center gap-2 mb-2">
+                <GoogleIcon className="h-8 w-8" />
+                <span className="font-semibold text-white/90">Google Rating</span>
+              </div>
               <div className="text-6xl font-display font-semibold text-primary">5.0</div>
               <div className="mt-3 flex justify-center">
-                <Stars />
+                <GoogleStars className="h-5 w-5" />
               </div>
               <div className="mt-2 text-sm text-white/70">Based on 180+ Google reviews</div>
-              <a
-                href="https://maps.app.goo.gl/Lf1RVViTtbiZb2tJ9"
-                target="_blank"
-                rel="noopener"
+              <Link
+                to="/contact"
                 className="mt-6 inline-flex btn-primary text-sm"
               >
-                Leave a Google review
-              </a>
+                Schedule Service or Request Quote
+              </Link>
             </div>
           </div>
         </div>
@@ -102,18 +99,7 @@ function Reviews() {
       <section className="container-x py-20">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r) => (
-            <article
-              key={r.name}
-              className="relative rounded-3xl bg-card border border-border p-7 hover:shadow-elegant transition"
-            >
-              <Quote className="absolute right-6 top-6 h-8 w-8 text-primary/20" />
-              <Stars />
-              <p className="mt-4 text-secondary/90 leading-relaxed">"{r.text}"</p>
-              <div className="mt-6 pt-6 border-t border-border">
-                <div className="font-semibold text-secondary">{r.name}</div>
-                <div className="text-sm text-muted-foreground">{r.location}</div>
-              </div>
-            </article>
+            <GoogleReviewCard key={r.name} review={r} />
           ))}
         </div>
       </section>

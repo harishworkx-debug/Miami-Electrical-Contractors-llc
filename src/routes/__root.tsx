@@ -35,10 +35,10 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error as Error, { boundary: "tanstack_root_error_component" });
   }, [error]);
   return (
     <div className="flex min-h-[70vh] items-center justify-center bg-background px-4">
@@ -76,7 +76,7 @@ const orgSchema = {
   telephone: site.phone,
   email: site.email,
   url: site.url,
-  sameAs: ["https://maps.app.goo.gl/Lf1RVViTtbiZb2tJ9"],
+  sameAs: [],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.street,
@@ -85,7 +85,7 @@ const orgSchema = {
     postalCode: site.zip,
     addressCountry: "US",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 25.7975, longitude: -80.1912 },
+  geo: { "@type": "GeoCoordinates", latitude: 25.7617, longitude: -80.1918 },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
