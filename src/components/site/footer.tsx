@@ -107,10 +107,25 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-white/50">
           <div>
-            © {new Date().getFullYear()} {site.name}. Licensed Florida Electrical Contractor. All
-            rights reserved.
+            © {new Date().getFullYear()} {site.legalName}. {site.licenseNumber}. {site.insuranceCoverageShort}. {site.warrantyTerms}.
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-5">
+            <a
+              href={site.dbprLicenseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white underline underline-offset-2"
+            >
+              Verify DBPR License
+            </a>
+            <a
+              href={site.googleBusinessProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white underline underline-offset-2"
+            >
+              Google Business Profile
+            </a>
             <Link to="/services" className="hover:text-white">
               Services
             </Link>

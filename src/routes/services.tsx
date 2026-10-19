@@ -7,31 +7,32 @@ import { Breadcrumbs, breadcrumbSchema } from "@/components/site/breadcrumbs";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Electrical Contractor Miami FL | Miami Electrical Services" },
+      { title: "Electrical Services in Miami, FL | Miami Electrical Contractors" },
       {
         name: "description",
         content:
-          "Looking for an electrical contractor in Miami? We provide comprehensive residential and commercial electrical services, repairs, wiring, and panel upgrades.",
+          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. State-certified electrical contractor Lic. #EC13010482.",
       },
       {
         property: "og:title",
-        content: "Electrical Services in Miami, FL | Miami Electrician",
+        content: "Electrical Services in Miami, FL | Miami Electrical Contractors",
       },
       {
         property: "og:description",
         content:
-          "Every kind of electrical service across Miami and South Florida. 24/7 licensed electricians.",
+          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. State-certified electrical contractor Lic. #EC13010482.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${site.url}/services` },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Electrical Services in Miami, FL | Miami Electrician",
+        content: "Electrical Services in Miami, FL | Miami Electrical Contractors",
       },
       {
         name: "twitter:description",
-        content: "Every kind of electrical service across Miami. 24/7 licensed electricians.",
+        content:
+          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. State-certified electrical contractor Lic. #EC13010482.",
       },
     ],
     links: [{ rel: "canonical", href: `${site.url}/services` }],
@@ -67,8 +68,8 @@ function ServicesIndex() {
             <h1 className="mt-5 font-display text-5xl md:text-6xl font-semibold leading-[1.05]">
               Miami <span className="text-gradient">Electrical Services</span>
             </h1>
-            <p className="mt-6 max-w-xl text-white/70 text-lg leading-relaxed">
-              As a premier electrical contractor Miami residents and businesses trust, we provide comprehensive electrical services Miami wide. From emergency repairs to large-scale commercial installations, our licensed team of electrical contractors Miami relies on is ready 24/7. When you need a reliable electrical contractor in Miami, we deliver safe, code-compliant results.
+            <p className="mt-6 max-w-2xl text-white/70 text-lg leading-relaxed">
+              From residential panel replacements and EV charging circuits to commercial three-phase switchgear and 24/7 emergency troubleshooting, our state-certified team (Lic. #EC13010482) provides safe, code-compliant craftsmanship across South Florida. Explore our specialized services below for engineering processes, municipal permit requirements, and case studies.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={site.phoneHref} className="btn-primary">
@@ -78,7 +79,7 @@ function ServicesIndex() {
                 to="/contact"
                 className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"
               >
-                Free Estimate <ArrowRight className="h-4 w-4" />
+                Free Written Estimate <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -127,8 +128,9 @@ function ServicesIndex() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-5 font-semibold text-primary text-sm group-hover:underline">
-                        → Learn about {s.title.toLowerCase()} in Miami
+                      <div className="mt-5 font-semibold text-primary text-sm group-hover:underline flex items-center gap-1.5">
+                        <span>Explore {s.title}</span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
                   </Link>

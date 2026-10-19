@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Nav } from "@/components/site/nav";
 import { Footer } from "@/components/site/footer";
 import { StickyCTA } from "@/components/site/sticky-cta";
-import { site } from "@/lib/site";
+import { site, reviews } from "@/lib/site";
 
 function NotFoundComponent() {
   return (
@@ -71,12 +71,22 @@ const orgSchema = {
   "@type": "Electrician",
   "@id": `${site.url}/#business`,
   name: site.name,
+  legalName: site.legalName,
   image:
     "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
   telephone: site.phone,
   email: site.email,
   url: site.url,
-  sameAs: [],
+  sameAs: [site.googleBusinessProfileUrl, site.dbprLicenseUrl],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "license",
+    name: "Florida Certified Electrical Contractor Lic. #EC13010482",
+    recognizedBy: {
+      "@type": "GovernmentOrganization",
+      name: "Florida Department of Business and Professional Regulation",
+    },
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: site.street,
@@ -96,15 +106,17 @@ const orgSchema = {
   ],
   areaServed: [
     "Miami",
-    "Miami Beach",
     "Coral Gables",
-    "Brickell",
-    "Downtown Miami",
+    "South Miami",
+    "Miami Beach",
+    "Hialeah",
+    "Kendall",
+    "Doral",
+    "Homestead",
+    "Pinecrest",
     "North Miami",
-    "South Florida",
   ],
   priceRange: "$$",
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "182" },
 };
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
@@ -112,11 +124,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Electrician Miami FL | Miami Electrician" },
+      { title: "Miami Electrician | Electrical Contractor" },
       {
         name: "description",
         content:
-          "Need an electrician in Miami, FL? Miami Electrician provides electrical repair, wiring, panel upgrades, lighting, EV charger installation and emergency electrical services. Call (305) 679-6434.",
+          "State-certified electrical contractor (Lic. #EC13010482) serving Miami, FL. 24/7 residential, commercial, panel upgrades, and emergency electrical service.",
       },
       { name: "author", content: site.name },
       { name: "theme-color", content: "#0B1320" },

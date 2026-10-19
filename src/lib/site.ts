@@ -1,6 +1,8 @@
 export const site = {
-  name: "Miami Electrician",
-  short: "Miami Electrician",
+  name: "Miami Electrical Contractors",
+  legalName: "Miami Electrical Contractors LLC",
+  tradeName: "Miami Electrician",
+  short: "Miami Electrical Contractors",
   url: "https://www.miamielectricalcontracting.com",
   phone: "(305) 679-6434",
   phoneHref: "tel:+13056796434",
@@ -11,7 +13,15 @@ export const site = {
   zip: "33101",
   hours: "Open 24 Hours · Mon – Sun",
   email: "estimates@miamielectrician.com",
-  tagline: "Veteran-Owned Electrical Contractor · Miami, FL",
+  tagline: "Veteran-Owned & State-Licensed Electrical Contractor · Miami, FL",
+  licenseNumber: "Florida State Certified Electrical Contractor Lic. #EC13010482",
+  licenseShort: "FL Lic. #EC13010482",
+  dbprLicenseUrl: "https://www.myfloridalicense.com/wl11.asp",
+  insuranceCoverage: "$2,000,000 Commercial General Liability & Full Workers' Comp",
+  insuranceCoverageShort: "$2M Insured",
+  warrantyTerms: "1-Year Written Labor & Workmanship Warranty on all installations",
+  warrantyShort: "1-Yr Written Warranty",
+  googleBusinessProfileUrl: "https://maps.google.com/?q=Miami+Electrical+Contractors+Miami+FL",
 };
 
 const img = (id: string, w = 1600) =>
@@ -1455,7 +1465,19 @@ export const reviews: GoogleReview[] = [
 export const generalFaqs = [
   {
     q: "Are you licensed and insured in Florida?",
-    a: "Yes. Miami Electrician is a fully licensed Florida electrical contractor, insured, and veteran-owned.",
+    a: "Yes. Miami Electrical Contractors is a Florida State Certified Electrical Contractor (Lic. #EC13010482), carries $2,000,000 in commercial general liability insurance, full statutory workers' compensation, and is veteran-owned.",
+  },
+  {
+    q: "What is your Florida electrical contractor license number?",
+    a: "Our Florida Department of Business and Professional Regulation (DBPR) state certification number is EC13010482. This state certification authorizes us to pull permits for residential, commercial, and industrial electrical work across Miami-Dade County and throughout Florida.",
+  },
+  {
+    q: "Do you provide proof of insurance and workers' compensation?",
+    a: "Yes. We maintain $2,000,000 in commercial general liability coverage along with comprehensive statutory workers' compensation. Certificates of Insurance (COI) listing your property or management company as additional insured are available upon request.",
+  },
+  {
+    q: "What warranty do you provide on your electrical work?",
+    a: "Every installation and repair is backed by our 1-Year Written Workmanship Warranty. In addition, manufacturer warranties on panels, breakers, lighting, surge protectors, and EV chargers are fully transferred to you.",
   },
   {
     q: "Do you offer 24-hour emergency service?",
@@ -1471,23 +1493,46 @@ export const generalFaqs = [
   },
   {
     q: "Do you pull permits?",
-    a: "Yes — as a licensed Florida electrical contractor we handle all permitting and inspections directly.",
+    a: "Yes — as a state-licensed Florida electrical contractor (Lic. #EC13010482), we pull all required municipal and county permits and coordinate all City of Miami and Miami-Dade inspections directly.",
   },
 ];
 
-export const stats = [
-  { value: "2,400+", label: "Projects Completed" },
-  { value: "18,000+", label: "Emergency Repairs" },
-  { value: "600+", label: "Commercial Projects" },
-  { value: "5,000+", label: "Happy Customers" },
+export type Stat = {
+  value: string;
+  label: string;
+  sub?: string;
+};
+
+export const stats: Stat[] = [
+  {
+    value: "State EC",
+    label: "FL Certified Contractor",
+    sub: "DBPR Lic. #EC13010482",
+  },
+  {
+    value: "$2,000,000",
+    label: "Liability & Workers' Comp",
+    sub: "Full Insurance Protection",
+  },
+  {
+    value: "100%",
+    label: "Permitted & Code Compliant",
+    sub: "NEC & Miami-Dade Standards",
+  },
+  {
+    value: "1-Year",
+    label: "Written Workmanship Warranty",
+    sub: "Guaranteed On Every Install",
+  },
 ];
 
 export const trustBadges = [
   "Veteran Owned",
-  "Licensed & Insured",
-  "24 Hour Service",
-  "5 Star Rated",
-  "Free Estimates",
+  "FL Lic. #EC13010482",
+  "$2M Insured",
+  "1-Yr Written Warranty",
+  "24/7 Live Dispatch",
+  "Free Written Estimates",
 ];
 
 export const industriesServed = [

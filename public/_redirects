@@ -1,0 +1,4 @@
+# Canonical Hostname & HTTPS Enforcement (Cloudflare Pages / Edge)
+http://miamielectricalcontracting.com/* https://www.miamielectricalcontracting.com/:splat 301!
+https://miamielectricalcontracting.com/* https://www.miamielectricalcontracting.com/:splat 301!
+http://www.miamielectricalcontracting.com/* https://www.miamielectricalcontracting.com/:splat 301!

@@ -1,5 +1,5 @@
-import { reviews, type GoogleReview } from "@/lib/site";
-import { CheckCircle2, MessageSquare } from "lucide-react";
+import { reviews, site, type GoogleReview } from "@/lib/site";
+import { CheckCircle2, MessageSquare, ExternalLink } from "lucide-react";
 
 export function GoogleIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
@@ -156,7 +156,7 @@ export function GoogleReviewsSection({
                 <span className="font-semibold text-secondary text-base">Google Rating</span>
               </div>
               <span className="rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 px-2.5 py-0.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-                EXCELLENT
+                VERIFIED
               </span>
             </div>
 
@@ -165,26 +165,61 @@ export function GoogleReviewsSection({
               <div>
                 <GoogleStars className="h-5 w-5" />
                 <div className="mt-1 text-xs font-medium text-muted-foreground">
-                  Based on 180+ verified Google reviews
+                  Genuine Google Customer Feedback
                 </div>
               </div>
             </div>
 
-            <div className="mt-5 pt-4 border-t border-border flex items-center justify-between text-xs text-muted-foreground">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-primary" />
-                100% Verified Customers
-              </span>
-              <span>Miami, FL</span>
+            <div className="mt-5 pt-4 border-t border-border space-y-3 text-xs text-muted-foreground">
+              <div className="flex items-center justify-between">
+                <span className="flex items-center gap-1.5 font-medium text-secondary">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                  Verified Business Profile
+                </span>
+                <span>Miami, FL</span>
+              </div>
+              <p className="text-[11px] leading-relaxed text-muted-foreground">
+                All reviews reflect verified work performed across Miami-Dade County. Independently verify our ratings and customer submissions directly on Google.
+              </p>
+              <a
+                href={site.googleBusinessProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between rounded-xl bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2.5 font-semibold transition"
+              >
+                <span>Verify on Google Maps</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
 
         {/* Right Column: Google Reviews Grid */}
-        <div className="grid gap-4 md:grid-cols-2">
-          {displayedReviews.map((r) => (
-            <GoogleReviewCard key={r.name} review={r} />
-          ))}
+        <div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {displayedReviews.map((r) => (
+              <GoogleReviewCard key={r.name} review={r} />
+            ))}
+          </div>
+
+          {/* Customer Evidence Transparency Notice */}
+          <div className="mt-6 rounded-2xl bg-surface border border-border/80 p-4 text-xs text-muted-foreground flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+              <span>
+                <strong className="text-secondary font-medium">Customer Evidence Transparency:</strong> Reviews represent authentic client service calls in South Florida. We never use fabricated or incentivized ratings.
+              </span>
+            </div>
+            <a
+              href={site.googleBusinessProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-semibold text-primary hover:underline shrink-0"
+            >
+              <span>Live Google Profile</span>
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

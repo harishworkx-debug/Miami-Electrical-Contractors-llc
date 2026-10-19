@@ -6,42 +6,48 @@ import {
   GoogleIcon,
   GoogleStars,
 } from "@/components/site/google-reviews";
+import { ExternalLink, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: `Customer Reviews | ${site.name}` },
+      { title: "Customer Reviews | Miami Electrical Contractors" },
       {
         name: "description",
         content:
-          "Read verified customer reviews and discover why homeowners and businesses trust Miami Electrician.",
+          "Read verified customer reviews for Miami Electrical Contractors. 5.0 Google rating from residential and commercial clients across Miami-Dade County.",
       },
-      { property: "og:title", content: `Customer Reviews | ${site.name}` },
+      { property: "og:title", content: "Customer Reviews | Miami Electrical Contractors" },
       {
         property: "og:description",
-        content: "Verified 5-star reviews from Miami and South Florida homeowners and businesses.",
+        content:
+          "Read verified customer reviews for Miami Electrical Contractors. 5.0 Google rating from residential and commercial clients across Miami-Dade County.",
       },
-      { property: "og:url", content: "/reviews" },
+      { property: "og:url", content: `${site.url}/reviews` },
     ],
-    links: [{ rel: "canonical", href: "/reviews" }],
+    links: [{ rel: "canonical", href: `${site.url}/reviews` }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Electrician",
-          name: site.name,
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "5.0",
-            reviewCount: String(reviews.length + 176),
+          "@type": "WebPage",
+          "@id": `${site.url}/reviews#webpage`,
+          url: `${site.url}/reviews`,
+          name: `Customer Reviews & Verified Evidence | ${site.name}`,
+          description: "Customer testimonials and verified project evidence from Miami and South Florida homeowners and businesses.",
+          isPartOf: {
+            "@type": "WebSite",
+            "@id": `${site.url}/#website`,
+            name: site.name,
+            url: site.url,
           },
-          review: reviews.map((r) => ({
-            "@type": "Review",
-            reviewRating: { "@type": "Rating", ratingValue: "5" },
-            author: { "@type": "Person", name: r.name },
-            reviewBody: r.text,
-          })),
+          about: {
+            "@type": "Electrician",
+            "@id": `${site.url}/#business`,
+            name: site.name,
+            sameAs: [site.googleBusinessProfileUrl],
+          },
         }),
       },
     ],
@@ -84,13 +90,24 @@ function Reviews() {
               <div className="mt-3 flex justify-center">
                 <GoogleStars className="h-5 w-5" />
               </div>
-              <div className="mt-2 text-sm text-white/70">Based on 180+ Google reviews</div>
-              <Link
-                to="/contact"
-                className="mt-6 inline-flex btn-primary text-sm"
-              >
-                Schedule Service or Request Quote
-              </Link>
+              <div className="mt-2 text-sm text-white/70">Verified Google Business Profile Rating</div>
+              <div className="mt-6 flex flex-col gap-2.5">
+                <a
+                  href={site.googleBusinessProfileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-3 text-sm font-semibold transition"
+                >
+                  <span>Verify All Reviews on Google</span>
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+                <Link
+                  to="/contact"
+                  className="inline-flex justify-center btn-ghost bg-white/10 text-white text-xs py-2 hover:bg-white/15"
+                >
+                  Schedule Service or Request Free Quote
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -101,6 +118,25 @@ function Reviews() {
           {reviews.map((r) => (
             <GoogleReviewCard key={r.name} review={r} />
           ))}
+        </div>
+
+        {/* Customer Evidence Transparency Notice */}
+        <div className="mt-12 rounded-2xl bg-surface border border-border/80 p-5 text-xs text-muted-foreground flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5">
+            <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+            <div>
+              <strong className="text-secondary font-semibold">Review Authenticity & Verification Policy:</strong> All testimonials shown above are authentic accounts from real South Florida residential and commercial customers. We never use fabricated, automated, or incentivized feedback.
+            </div>
+          </div>
+          <a
+            href={site.googleBusinessProfileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline shrink-0"
+          >
+            <span>Live Google Maps Profile</span>
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
         </div>
       </section>
 
