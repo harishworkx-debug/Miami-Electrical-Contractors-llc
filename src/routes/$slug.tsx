@@ -535,7 +535,7 @@ function ServicePageView({ service: s }: { service: Service }) {
               Talk to a licensed electrician
             </div>
             <p className="mt-2 text-sm text-white/70">
-              Florida State Certified EC. Upfront written pricing & same-day response.
+              Florida State Certified Electrician. Upfront written pricing & same-day response.
             </p>
             <div className="mt-5 space-y-3">
               <a
@@ -761,7 +761,7 @@ function LocationPageView({ location: l }: { location: Location }) {
             </div>
             <div className="flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
               <CheckCircle2 className="h-4 w-4" />
-              <span>State Certified EC · Licensed & Insured</span>
+              <span>State Certified · Licensed & Insured</span>
             </div>
           </div>
 

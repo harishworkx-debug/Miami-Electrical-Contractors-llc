@@ -318,7 +318,7 @@ function Home() {
                 {
                   icon: ShieldCheck,
                   title: "Veteran-Owned Discipline",
-                  body: "Trained, uniformed and background-checked crews.",
+                  body: "Professional, punctual service with direct communication.",
                 },
                 {
                   icon: Clock,
@@ -597,7 +597,7 @@ function Home() {
               {
                 step: "03",
                 title: "Licensed Install",
-                body: "Uniformed technicians deliver code-compliant work.",
+                body: "Experienced technicians deliver code-compliant work.",
               },
               {
                 step: "04",

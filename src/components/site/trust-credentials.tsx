@@ -1,5 +1,5 @@
 import { site } from "@/lib/site";
-import { ShieldCheck, Award, FileText, CheckCircle2, ExternalLink } from "lucide-react";
+import { ShieldCheck, FileText, CheckCircle2 } from "lucide-react";
 
 export function TrustCredentials() {
   return (
@@ -18,46 +18,10 @@ export function TrustCredentials() {
               Every factual claim and credential we present is verifiable. As a professional electrical contractor serving South Florida, we protect our clients with state licensing, comprehensive liability insurance, and strict code compliance.
             </p>
           </div>
-          <div className="shrink-0 flex flex-wrap gap-3">
-            <a
-              href={site.dbprLicenseUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-secondary text-secondary-foreground px-4 py-2.5 text-xs md:text-sm font-semibold hover:bg-secondary/90 transition shadow-sm"
-            >
-              <span>Verify Florida State License</span>
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
-          </div>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {/* Card 1: License */}
-          <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/40 hover:shadow-sm transition">
-            <div>
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <Award className="h-6 w-6" />
-              </div>
-              <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-primary">
-                State Certification
-              </div>
-              <h3 className="mt-1 font-display text-xl font-semibold text-secondary">
-                Florida EC License
-              </h3>
-              <div className="mt-2 inline-block rounded-md bg-secondary/5 dark:bg-white/5 px-2.5 py-1 text-xs font-mono font-semibold text-secondary">
-                {site.licenseShort}
-              </div>
-              <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
-                Issued by Florida DBPR. Authorized to pull all municipal and county electrical permits for residential, commercial, and industrial projects statewide.
-              </p>
-            </div>
-            <div className="mt-5 pt-3 border-t border-border flex items-center gap-1.5 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
-              <CheckCircle2 className="h-3.5 w-3.5 shrink-0" />
-              <span>Active & in good standing</span>
-            </div>
-          </div>
-
-          {/* Card 2: Insurance */}
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {/* Card 1: Insurance */}
           <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/40 hover:shadow-sm transition">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
@@ -82,7 +46,7 @@ export function TrustCredentials() {
             </div>
           </div>
 
-          {/* Card 3: Upfront Written Pricing */}
+          {/* Card 2: Upfront Written Pricing */}
           <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/40 hover:shadow-sm transition">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
@@ -107,7 +71,7 @@ export function TrustCredentials() {
             </div>
           </div>
 
-          {/* Card 4: Permitted & Code Compliant */}
+          {/* Card 3: Permitted & Code Compliant */}
           <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/40 hover:shadow-sm transition">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">

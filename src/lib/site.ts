@@ -1497,9 +1497,9 @@ export type Stat = {
 
 export const stats: Stat[] = [
   {
-    value: "State EC",
-    label: "FL Certified Contractor",
-    sub: "Licensed & Insured",
+    value: "Licensed",
+    label: "State-Certified Contractor",
+    sub: "Fully Insured",
   },
   {
     value: "$2,000,000",
