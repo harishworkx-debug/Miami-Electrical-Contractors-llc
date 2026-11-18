@@ -1000,8 +1000,8 @@ export const serviceDetailsBySlug: Record<
         "A new 3,800 sq ft restaurant build-out required high-voltage 3-phase kitchen equipment feeds, architectural low-voltage accent lighting, and emergency egress lighting.",
       solution:
         "Executed complete electrical installation including conduit runs, kitchen exhaust hood shunt-trip breaker interlocks, and Lutron Vive commercial lighting controls.",
-      result:
-        "Project delivered on schedule within budget, passing City of Miami commercial electrical and fire inspection on first walk.",
+        result:
+      "Project delivered on schedule within budget, passing City of Miami commercial electrical and fire inspection on first walk.",
     },
     permitDetails: {
       required: true,
@@ -1044,8 +1044,8 @@ export const serviceDetailsBySlug: Record<
         "A 1952 single-family home had degraded ungrounded cloth-insulated wiring that was actively flaking inside junction boxes, creating an electrical fire hazard.",
       solution:
         "Fished 22 new grounded copper branch circuits throughout the house via attic access with zero damage to historic tongue-and-groove wood ceilings.",
-      result:
-        "House brought into full compliance with 2023 NEC standards; owner qualified for lower homeowners insurance premiums.",
+        result:
+      "House brought into full compliance with 2023 NEC standards; owner qualified for lower homeowners insurance premiums.",
     },
     permitDetails: {
       required: true,
@@ -1088,8 +1088,8 @@ export const serviceDetailsBySlug: Record<
         "Main panel was located on opposite side of residence 70 feet away from the garage, requiring a clean run through finished ceilings.",
       solution:
         "Routed EMT conduit cleanly through the attic space, installed dedicated 60A Square D breaker, mounted charger, and configured 48A continuous charge rate.",
-      result:
-        "Owner charges their EV from 20% to 80% in under 5 hours; permitted with City of South Miami Building Department.",
+        result:
+      "Owner charges their EV from 20% to 80% in under 5 hours; permitted with City of South Miami Building Department.",
     },
     permitDetails: {
       required: true,
