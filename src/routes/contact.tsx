@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Phone, MapPin, Clock, Mail, ArrowRight, ShieldCheck, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, ArrowRight, ShieldCheck, CircleCheck as CheckCircle2, CircleAlert as AlertCircle, Loader as Loader2 } from "lucide-react";
 import { site, locations, services } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact a Miami Electrician | Free Estimates" },
+      { title: "Contact a Miami Electrician" },
       {
         name: "description",
-        content: `Contact Miami Electrical Contractors for 24/7 emergency dispatch and free written estimates across Miami-Dade County. Call ${site.phone}.`,
+        content: `Contact Miami Electrical Contractors for 24/7 emergency dispatch and electrical service across Miami-Dade County. Call ${site.phone}.`,
       },
-      { property: "og:title", content: "Contact a Miami Electrician | Free Estimates" },
+      { property: "og:title", content: "Contact a Miami Electrician" },
       {
         property: "og:description",
-        content: "24/7 dispatched mobile electrical service across Miami-Dade County. Call or request a free estimate.",
+        content: "24/7 dispatched mobile electrical service across Miami-Dade County. Call or request service.",
       },
       { property: "og:url", content: `${site.url}/contact` },
     ],
@@ -66,9 +66,9 @@ function Contact() {
       }
 
       // 2. Open mailto client for redundancy
-      const msg = `Hi Miami Electrical Contractors,\n\nI would like to request an estimate:\nName: ${name}\nPhone: ${phone}\nService: ${service || "Electrical Service"}\nDetails: ${details || "None provided"}`;
+      const msg = `Hi Miami Electrical Contractors,\n\nI would like to request service:\nName: ${name}\nPhone: ${phone}\nService: ${service || "Electrical Service"}\nDetails: ${details || "None provided"}`;
       window.open(
-        `mailto:${site.email}?subject=Free Electrical Estimate Request - ${name}&body=${encodeURIComponent(msg)}`,
+        `mailto:${site.email}?subject=Electrical Service Request - ${name}&body=${encodeURIComponent(msg)}`,
       );
 
       setFormState("success");
@@ -96,7 +96,7 @@ function Contact() {
             Talk to a <span className="text-gradient">Miami electrician</span> now.
           </h1>
           <p className="mt-6 max-w-xl text-white/70 text-lg">
-            Live dispatcher 24/7. Free estimates. Same-day service anywhere in Miami-Dade County.
+            Live dispatcher 24/7. Upfront pricing. Same-day service anywhere in Miami-Dade County.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ function Contact() {
 
           <div className="rounded-3xl border border-border bg-card p-8 shadow-elegant">
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-              Request free estimate
+              Request service
             </div>
             <div className="mt-2 font-display text-2xl font-semibold text-secondary">
               Tell us about your project
@@ -135,7 +135,7 @@ function Contact() {
                   <CheckCircle2 className="h-7 w-7" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-secondary">
-                  Estimate Request Received!
+                  Service Request Received!
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
                   Thank you! Our on-duty dispatcher will review your request and call you shortly. For immediate urgent response, call us directly.
@@ -221,7 +221,7 @@ function Contact() {
                   ) : (
                     <>
                       <Mail className="h-4 w-4" />
-                      <span>Send Estimate Request</span>
+                      <span>Send Service Request</span>
                     </>
                   )}
                 </button>

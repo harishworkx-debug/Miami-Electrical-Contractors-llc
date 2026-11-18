@@ -59,14 +59,14 @@ export type Service = {
 const WHY_US_DEFAULT = [
   "Veteran-owned, licensed Florida electrical contractor",
   "Live 24/7 dispatch — 60-minute response in Miami-Dade",
-  "Flat, upfront pricing with free written estimates",
+  "Flat, upfront pricing with written quotes",
   "Permits pulled and all work inspected & warrantied",
 ];
 
 const PROCESS_DEFAULT = [
   {
-    title: "Free Estimate",
-    body: "We diagnose on-site and quote a fixed, written price before any work begins.",
+    title: "On-Site Consultation",
+    body: "We diagnose on-site and provide a fixed, written price before any work begins.",
   },
   {
     title: "Scheduled Service",
@@ -1484,8 +1484,8 @@ export const generalFaqs = [
     a: "Yes — a live dispatcher answers around the clock and we typically arrive within 60 minutes in Miami-Dade.",
   },
   {
-    q: "Do you provide free estimates?",
-    a: "Yes. We offer free written estimates for most residential and commercial projects across South Florida.",
+    q: "How do I request service?",
+    a: "Call us anytime or use the contact form on our website. A licensed electrician will review your project and walk you through next steps.",
   },
   {
     q: "Which areas do you serve?",
@@ -1532,7 +1532,7 @@ export const trustBadges = [
   "$2M Insured",
   "1-Yr Written Warranty",
   "24/7 Live Dispatch",
-  "Free Written Estimates",
+  "Upfront Written Pricing",
 ];
 
 export const industriesServed = [

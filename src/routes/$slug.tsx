@@ -1,18 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Phone,
-  MessageCircle,
-  AlertTriangle,
-  MapPin,
-  Star,
-  Building2,
-  FileText,
-  Award,
-  ShieldCheck,
-  ExternalLink,
-} from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle2, Phone, MessageCircle, TriangleAlert as AlertTriangle, MapPin, Star, Building2, FileText, Award, ShieldCheck, ExternalLink } from "lucide-react";
 import {
   findPage,
   locations,
@@ -306,7 +293,7 @@ function ServicePageView({ service: s }: { service: Service }) {
               to="/contact"
               className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"
             >
-              Free Estimate <ArrowRight className="h-4 w-4" />
+              Contact an Electrician <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -488,7 +475,7 @@ function ServicePageView({ service: s }: { service: Service }) {
                 <strong className="text-secondary font-semibold">Our Pricing Promise:</strong> You receive a comprehensive, itemized written estimate before any work commences. No surprise charges, ever.
               </div>
               <Link to="/contact" className="btn-primary text-xs py-2 px-4 shrink-0">
-                Request Free Estimate
+                Request Electrical Service
               </Link>
             </div>
           </div>
@@ -548,7 +535,7 @@ function ServicePageView({ service: s }: { service: Service }) {
               Talk to a licensed electrician
             </div>
             <p className="mt-2 text-sm text-white/70">
-              Florida State Certified EC (#EC13010482). Free written estimates & same-day response.
+              Florida State Certified EC (#EC13010482). Upfront written pricing & same-day response.
             </p>
             <div className="mt-5 space-y-3">
               <a
@@ -692,7 +679,7 @@ function LocationPageView({ location: l }: { location: Location }) {
               to="/contact"
               className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"
             >
-              Free Written Estimate <ArrowRight className="h-4 w-4" />
+              Request Electrical Service <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -987,7 +974,7 @@ function LocationPageView({ location: l }: { location: Location }) {
 
       <CtaBand
         title={`Need an electrician in ${l.city} right now?`}
-        subtitle={`State Certified Electrical Contractor (#EC13010482) serving ${l.city} with 24/7 emergency response and free written estimates.`}
+        subtitle={`State Certified Electrical Contractor (#EC13010482) serving ${l.city} with 24/7 emergency response and upfront written pricing.`}
       />
     </div>
   );

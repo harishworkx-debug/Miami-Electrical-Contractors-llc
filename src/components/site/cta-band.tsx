@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export function CtaBand({
   title = "Ready for a licensed Miami electrician?",
-  subtitle = "Call now for a free estimate or 24-hour emergency service anywhere in Miami-Dade.",
+  subtitle = "Call now for electrical service or 24-hour emergency response anywhere in Miami-Dade.",
 }: {
   title?: string;
   subtitle?: string;
@@ -21,7 +21,7 @@ export function CtaBand({
         <div className="relative grid gap-10 md:grid-cols-[1.4fr_1fr] items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-primary">
-              24/7 Emergency · Free Estimates
+              24/7 Emergency · Upfront Pricing
             </div>
             <h2 className="mt-5 font-display text-3xl md:text-5xl font-semibold leading-tight">
               {title}

@@ -1,26 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import {
-  Phone,
-  MessageCircle,
-  ShieldCheck,
-  Star,
-  Zap,
-  Clock,
-  Award,
-  CheckCircle2,
-  Home as HomeIcon,
-  Building2,
-  Factory,
-  ArrowRight,
-  Sparkles,
-  MapPin,
-  AlertTriangle,
-  Wrench,
-  Lightbulb,
-  Plug,
-  FileText,
-} from "lucide-react";
+import { Phone, MessageCircle, ShieldCheck, Star, Zap, Clock, Award, CircleCheck as CheckCircle2, Chrome as HomeIcon, Building2, Factory, ArrowRight, Sparkles, MapPin, TriangleAlert as AlertTriangle, Wrench, Lightbulb, Plug, FileText } from "lucide-react";
 import { site, services, locations, reviews, generalFaqs, stats, trustBadges } from "@/lib/site";
 import { CtaBand } from "@/components/site/cta-band";
 import { GoogleReviewsSection } from "@/components/site/google-reviews";
@@ -235,7 +215,7 @@ function Home() {
                 to="/contact"
                 className="btn-ghost text-base bg-white/10 border-white/15 text-white hover:bg-white/15"
               >
-                Free Estimate <ArrowRight className="h-4 w-4" />
+                Contact an Electrician <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
 
@@ -267,7 +247,7 @@ function Home() {
                 </div>
               </div>
               <p className="mt-4 text-sm text-white/70">
-                A licensed Miami electrician answers every call. Free estimates. Same-day service.
+                A licensed Miami electrician answers every call. Upfront pricing. Same-day service.
               </p>
               <div className="mt-5 flex flex-col gap-3">
                 <a
@@ -611,7 +591,7 @@ function Home() {
               },
               {
                 step: "02",
-                title: "Free Estimate",
+                title: "On-Site Consultation",
                 body: "We diagnose on-site and quote a fixed, upfront price.",
               },
               {

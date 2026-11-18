@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle2, Phone } from "lucide-react";
 import { services, site, serviceMenuGroups } from "@/lib/site";
 import { CtaBand } from "@/components/site/cta-band";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/site/breadcrumbs";
@@ -79,7 +79,7 @@ function ServicesIndex() {
                 to="/contact"
                 className="btn-ghost bg-white/10 border-white/15 text-white hover:bg-white/15"
               >
-                Free Written Estimate <ArrowRight className="h-4 w-4" />
+                Request Electrical Service <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

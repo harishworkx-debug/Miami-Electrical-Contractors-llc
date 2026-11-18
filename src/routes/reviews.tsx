@@ -6,7 +6,7 @@ import {
   GoogleIcon,
   GoogleStars,
 } from "@/components/site/google-reviews";
-import { ExternalLink, CheckCircle2 } from "lucide-react";
+import { ExternalLink, CircleCheck as CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -105,7 +105,7 @@ function Reviews() {
                   to="/contact"
                   className="inline-flex justify-center btn-ghost bg-white/10 text-white text-xs py-2 hover:bg-white/15"
                 >
-                  Schedule Service or Request Free Quote
+                  Schedule Service or Request Electrical Service
                 </Link>
               </div>
             </div>
