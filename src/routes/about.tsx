@@ -11,13 +11,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Learn about Miami Electrical Contractors LLC, a veteran-owned and state-licensed electrical contractor (Lic. #EC13010482) serving Greater Miami.",
+          "Learn about Miami Electrical Contractors LLC, a veteran-owned and licensed electrical contractor serving Greater Miami.",
       },
       { property: "og:title", content: "About Our Miami Electrical Contracting Team" },
       {
         property: "og:description",
         content:
-          "Learn about Miami Electrical Contractors LLC, a veteran-owned and state-licensed electrical contractor (Lic. #EC13010482) serving Greater Miami.",
+          "Learn about Miami Electrical Contractors LLC, a veteran-owned and licensed electrical contractor serving Greater Miami.",
       },
       { property: "og:url", content: `${site.url}/about` },
     ],
@@ -64,10 +64,10 @@ function About() {
               Founded by U.S. military veterans and licensed Florida Master Electricians, <strong>{site.legalName}</strong> was established to bring accountability, military precision, and transparent pricing to South Florida's electrical contracting sector.
             </p>
             <p>
-              Operating as a certified electrical contractor under <strong>Florida DBPR License #{site.licenseNumber.split("#")[1] || "EC13010482"}</strong>, we maintain full compliance with the Florida Building Code (8th Edition 2023), the National Electrical Code (NEC NFPA 70), and Miami-Dade County High-Velocity Hurricane Zone (HVHZ) requirements.
+              Operating as a certified electrical contractor, we maintain full compliance with the Florida Building Code (8th Edition 2023), the National Electrical Code (NEC NFPA 70), and Miami-Dade County High-Velocity Hurricane Zone (HVHZ) requirements.
             </p>
             <p>
-              Every project is managed by qualified journeymen and master electricians with verified credentials. We maintain <strong>{site.insuranceCoverage}</strong> to ensure complete peace of mind on every residential, commercial, and industrial property we service, backed by our <strong>{site.warrantyTerms}</strong>.
+              Every project is managed by qualified journeymen and master electricians with verified credentials. We maintain <strong>{site.insuranceCoverage}</strong> to ensure complete peace of mind on every residential, commercial, and industrial property we service.
             </p>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">

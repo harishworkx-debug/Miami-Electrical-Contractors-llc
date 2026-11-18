@@ -81,7 +81,7 @@ const orgSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Florida Certified Electrical Contractor Lic. #EC13010482",
+    name: "Florida Certified Electrical Contractor",
     recognizedBy: {
       "@type": "GovernmentOrganization",
       name: "Florida Department of Business and Professional Regulation",
@@ -128,7 +128,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "State-certified electrical contractor (Lic. #EC13010482) serving Miami, FL. 24/7 residential, commercial, panel upgrades, and emergency electrical service.",
+          "Licensed electrical contractor serving Miami, FL. 24/7 residential, commercial, panel upgrades, and emergency electrical service.",
       },
       { name: "author", content: site.name },
       { name: "theme-color", content: "#0B1320" },

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. State-certified electrical contractor Lic. #EC13010482.",
+          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. Licensed electrical contractor.",
       },
       {
         property: "og:title",
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/services")({
       {
         property: "og:description",
         content:
-          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. State-certified electrical contractor Lic. #EC13010482.",
+          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. Licensed electrical contractor.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${site.url}/services` },
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "twitter:description",
         content:
-          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. State-certified electrical contractor Lic. #EC13010482.",
+          "Comprehensive residential, commercial, and emergency electrical services in Miami, FL. Licensed electrical contractor.",
       },
     ],
     links: [{ rel: "canonical", href: `${site.url}/services` }],
@@ -69,7 +69,7 @@ function ServicesIndex() {
               Miami <span className="text-gradient">Electrical Services</span>
             </h1>
             <p className="mt-6 max-w-2xl text-white/70 text-lg leading-relaxed">
-              From residential panel replacements and EV charging circuits to commercial three-phase switchgear and 24/7 emergency troubleshooting, our state-certified team (Lic. #EC13010482) provides safe, code-compliant craftsmanship across South Florida. Explore our specialized services below for engineering processes, municipal permit requirements, and case studies.
+              From residential panel replacements and EV charging circuits to commercial three-phase switchgear and 24/7 emergency troubleshooting, our licensed team provides safe, code-compliant craftsmanship across South Florida. Explore our specialized services below for engineering processes, municipal permit requirements, and case studies.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={site.phoneHref} className="btn-primary">

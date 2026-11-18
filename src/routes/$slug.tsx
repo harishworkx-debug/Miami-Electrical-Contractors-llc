@@ -50,7 +50,7 @@ export const Route = createFileRoute("/$slug")({
         },
         "residential-electrician-miami-fl": {
           title: "Residential Electrician in Miami, FL | Miami Electrical Contractors",
-          desc: "Trusted residential electrician in Miami, FL. Panel upgrades, whole-home rewiring, lighting installation, and home electrical repairs. Lic. #EC13010482.",
+          desc: "Trusted residential electrician in Miami, FL. Panel upgrades, whole-home rewiring, lighting installation, and home electrical repairs.",
         },
         "electrical-repair-miami-fl": {
           title: "Electrical Repair in Miami, FL | Miami Electrical Contractors",
@@ -73,7 +73,7 @@ export const Route = createFileRoute("/$slug")({
       const metaInfo = customMeta[s.slug];
       const title = metaInfo?.title || `${s.title} in Miami, FL | Miami Electrical Contractors`;
       const desc =
-        metaInfo?.desc || `${s.short} Licensed electrical contractor (Lic. #EC13010482). Call ${site.phone} for 24/7 service.`;
+        metaInfo?.desc || `${s.short} Licensed electrical contractor. Call ${site.phone} for 24/7 service.`;
       const crumbs: Crumb[] = [
         { label: "Home", to: "/" },
         { label: "Services", to: "/services" },
@@ -148,8 +148,8 @@ export const Route = createFileRoute("/$slug")({
       ? "Electrician in Miami, FL | Miami Electrical Contractors"
       : `Electrician in ${l.city}, FL | Miami Electrical Contractors`;
     const desc = isMiami
-      ? "State-certified electrical contractor (Lic. #EC13010482) serving Miami, FL. 24/7 emergency service, residential, commercial, panel upgrades, and repairs."
-      : `Licensed electrical contractor (Lic. #EC13010482) serving ${l.city}, FL. 24/7 emergency electrical service, panel upgrades, and repairs. Call ${site.phone}.`;
+      ? "State-certified electrical contractor serving Miami, FL. 24/7 emergency service, residential, commercial, panel upgrades, and repairs."
+      : `Licensed electrical contractor serving ${l.city}, FL. 24/7 emergency electrical service, panel upgrades, and repairs. Call ${site.phone}.`;
     const crumbs: Crumb[] = [
       { label: "Home", to: "/" },
       { label: "Locations", to: "/#locations" },
@@ -535,7 +535,7 @@ function ServicePageView({ service: s }: { service: Service }) {
               Talk to a licensed electrician
             </div>
             <p className="mt-2 text-sm text-white/70">
-              Florida State Certified EC (#EC13010482). Upfront written pricing & same-day response.
+              Florida State Certified EC. Upfront written pricing & same-day response.
             </p>
             <div className="mt-5 space-y-3">
               <a
@@ -594,7 +594,7 @@ function ServicePageView({ service: s }: { service: Service }) {
 
       <CtaBand
         title={`Book ${s.title.toLowerCase()} in Miami today.`}
-        subtitle="Florida Licensed Electrical Contractor (#EC13010482) · $2M Insured · 1-Year Workmanship Warranty."
+        subtitle="Florida Licensed Electrical Contractor · $2M Insured · Upfront Written Pricing."
       />
     </div>
   );
@@ -633,7 +633,7 @@ function LocationPageView({ location: l }: { location: Location }) {
   const valuePillars = localData?.localValuePillars || [
     {
       title: `State Licensed in ${l.city}`,
-      desc: "Florida Certified Electrical Contractor (#EC13010482) authorized to pull permits across Miami-Dade County.",
+      desc: "Florida Certified Electrical Contractor authorized to pull permits across Miami-Dade County.",
     },
     {
       title: "Rapid Municipal Dispatch",
@@ -644,8 +644,8 @@ function LocationPageView({ location: l }: { location: Location }) {
       desc: "Full commercial general liability and workers' compensation coverage protecting your property.",
     },
     {
-      title: "1-Year Written Warranty",
-      desc: "All labor and workmanship backed in writing with guaranteed post-installation support.",
+      title: "Upfront Written Pricing",
+      desc: "Transparent flat-rate quotes provided in writing before any electrical work begins.",
     },
   ];
 
@@ -761,7 +761,7 @@ function LocationPageView({ location: l }: { location: Location }) {
             </div>
             <div className="flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
               <CheckCircle2 className="h-4 w-4" />
-              <span>State Certified EC #EC13010482</span>
+              <span>State Certified EC · Licensed & Insured</span>
             </div>
           </div>
 
@@ -921,7 +921,7 @@ function LocationPageView({ location: l }: { location: Location }) {
               Call for immediate local service
             </div>
             <p className="mt-2 text-xs text-white/70">
-              Florida Licensed Electrical Contractor (#EC13010482) · Fast local response in {l.city}.
+              Florida Licensed Electrical Contractor · Fast local response in {l.city}.
             </p>
             <div className="mt-5 space-y-3">
               <a
@@ -974,7 +974,7 @@ function LocationPageView({ location: l }: { location: Location }) {
 
       <CtaBand
         title={`Need an electrician in ${l.city} right now?`}
-        subtitle={`State Certified Electrical Contractor (#EC13010482) serving ${l.city} with 24/7 emergency response and upfront written pricing.`}
+        subtitle={`State Certified Electrical Contractor serving ${l.city} with 24/7 emergency response and upfront written pricing.`}
       />
     </div>
   );

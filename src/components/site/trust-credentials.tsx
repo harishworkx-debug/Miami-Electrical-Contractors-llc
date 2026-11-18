@@ -9,13 +9,13 @@ export function TrustCredentials() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
               <ShieldCheck className="h-3.5 w-3.5" />
-              Verifiable Credentials & Guarantees
+              Verifiable Credentials & Insurance
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold leading-tight text-secondary">
-              State Licensed. Fully Insured. Warrantied in Writing.
+              State Licensed & Fully Insured.
             </h2>
             <p className="mt-4 max-w-2xl text-muted-foreground text-sm md:text-base leading-relaxed">
-              Every factual claim and credential we present is verifiable. As a professional electrical contractor serving South Florida, we protect our clients with state licensing, comprehensive liability insurance, and written workmanship guarantees.
+              Every factual claim and credential we present is verifiable. As a professional electrical contractor serving South Florida, we protect our clients with state licensing, comprehensive liability insurance, and strict code compliance.
             </p>
           </div>
           <div className="shrink-0 flex flex-wrap gap-3">
@@ -25,7 +25,7 @@ export function TrustCredentials() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-secondary text-secondary-foreground px-4 py-2.5 text-xs md:text-sm font-semibold hover:bg-secondary/90 transition shadow-sm"
             >
-              <span>Verify FL License (#EC13010482)</span>
+              <span>Verify Florida State License</span>
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -82,28 +82,28 @@ export function TrustCredentials() {
             </div>
           </div>
 
-          {/* Card 3: Workmanship Warranty */}
+          {/* Card 3: Upfront Written Pricing */}
           <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/40 hover:shadow-sm transition">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
                 <FileText className="h-6 w-6" />
               </div>
               <div className="mt-5 text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">
-                Written Guarantee
+                Transparent Pricing
               </div>
               <h3 className="mt-1 font-display text-xl font-semibold text-secondary">
-                1-Year Workmanship
+                Upfront Pricing
               </h3>
               <div className="mt-2 inline-block rounded-md bg-secondary/5 dark:bg-white/5 px-2.5 py-1 text-xs font-mono font-semibold text-secondary">
-                Labor & Install Backed
+                Written Estimates
               </div>
               <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
-                Every repair, panel upgrade, and installation is backed by a 1-year written labor warranty. Plus, full manufacturer warranties (up to 10+ years on panels) transfer to you.
+                Clear, detailed written estimates before any work begins. You approve the scope and cost upfront with no surprises or hidden fees.
               </p>
             </div>
             <div className="mt-5 pt-3 border-t border-border flex items-center gap-1.5 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
               <CheckCircle2 className="h-3.5 w-3.5 shrink-0" />
-              <span>Provided in writing on invoice</span>
+              <span>Fixed written quotes</span>
             </div>
           </div>
 

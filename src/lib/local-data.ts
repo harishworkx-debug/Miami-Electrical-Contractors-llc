@@ -400,7 +400,7 @@ export const locationDetailsBySlug: Record<string, LocalLandingData> = {
         solution:
           "Replaced failing enclosure with a custom NEMA 4X 316 stainless steel distribution panel, upgraded to tin-plated copper busbars, and applied dielectric sealant to all lugs.",
         outcome:
-          "Complete protection against salt air corrosion, backed by a written warranty and City of Miami Beach sign-off.",
+          "Complete protection against salt air corrosion, backed by code-compliant materials and City of Miami Beach sign-off.",
       },
     ],
     localValuePillars: [
@@ -620,7 +620,7 @@ export const locationDetailsBySlug: Record<string, LocalLandingData> = {
         solution:
           "Installed a 600A 480V distribution switchboard, ran rigid metal conduits across roof stanchions, and coordinated an overnight utility tie-in with FPL.",
         outcome:
-          "Zero downtime for refrigerated goods, full City of Doral final approval, and a 1-year commercial workmanship warranty.",
+          "Zero downtime for refrigerated goods, full City of Doral final approval, and verified commercial sign-off.",
       },
     ],
     localValuePillars: [
@@ -968,7 +968,7 @@ export const serviceDetailsBySlug: Record<
     whyChoose: [
       "Permits pulled across all 34 Miami-Dade municipalities",
       "Same-day turnaround to minimize power outage during the swap",
-      "Copper-bus commercial grade panels with lifetime warranties",
+      "Copper-bus commercial grade panels engineered for South Florida",
       "Built-in whole-home surge protection included on every panel install",
     ],
   },
@@ -1057,7 +1057,7 @@ export const serviceDetailsBySlug: Record<
       "Surgical wire-fishing techniques that preserve walls and ceilings",
       "100% solid copper American-made wire and spec-grade outlets",
       "Full arc-fault protection to eliminate hidden electrical fire risks",
-      "Backed by our 1-Year written workmanship warranty",
+      "Backed by our code-compliant installation standards",
     ],
   },
 

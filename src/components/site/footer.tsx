@@ -107,7 +107,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-white/50">
           <div>
-            © {new Date().getFullYear()} {site.legalName}. {site.licenseNumber}. {site.insuranceCoverageShort}. {site.warrantyTerms}.
+            © {new Date().getFullYear()} {site.legalName}. {site.licenseNumber}. {site.insuranceCoverageShort}.
           </div>
           <div className="flex flex-wrap gap-5">
             <a

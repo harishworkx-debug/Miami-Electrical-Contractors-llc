@@ -14,13 +14,13 @@ export const site = {
   hours: "Open 24 Hours · Mon – Sun",
   email: "estimates@miamielectrician.com",
   tagline: "Veteran-Owned & State-Licensed Electrical Contractor · Miami, FL",
-  licenseNumber: "Florida State Certified Electrical Contractor Lic. #EC13010482",
-  licenseShort: "FL Lic. #EC13010482",
+  licenseNumber: "Florida State Certified Electrical Contractor",
+  licenseShort: "Licensed & Insured",
   dbprLicenseUrl: "https://www.myfloridalicense.com/wl11.asp",
   insuranceCoverage: "$2,000,000 Commercial General Liability & Full Workers' Comp",
-  insuranceCoverageShort: "$2M Insured",
-  warrantyTerms: "1-Year Written Labor & Workmanship Warranty on all installations",
-  warrantyShort: "1-Yr Written Warranty",
+  insuranceCoverageShort: "$2M Coverage",
+  warrantyTerms: "",
+  warrantyShort: "",
   googleBusinessProfileUrl: "https://maps.google.com/?q=Miami+Electrical+Contractors+Miami+FL",
 };
 
@@ -60,7 +60,7 @@ const WHY_US_DEFAULT = [
   "Veteran-owned, licensed Florida electrical contractor",
   "Live 24/7 dispatch — 60-minute response in Miami-Dade",
   "Flat, upfront pricing with written quotes",
-  "Permits pulled and all work inspected & warrantied",
+  "Permits pulled and all work inspected to code",
 ];
 
 const PROCESS_DEFAULT = [
@@ -78,7 +78,7 @@ const PROCESS_DEFAULT = [
   },
   {
     title: "Final Walkthrough",
-    body: "We test every circuit, clean up, and back the job with a written warranty.",
+    body: "We test every circuit, clean up, and ensure full code compliance.",
   },
 ];
 
@@ -203,8 +203,8 @@ export const services: Service[] = [
     benefits: [
       "Neat, labeled and to-code installs",
       "Permits pulled and inspections handled",
-      "Manufacturer-warrantied hardware",
-      "Ten-year workmanship warranty",
+      "Premium UL-listed commercial hardware",
+      "Code-compliant installation standards",
     ],
     features: [
       "New outlets, USB receptacles and switches",
@@ -291,7 +291,7 @@ export const services: Service[] = [
       "Copper branch circuits to current NEC",
       "Neat runs, labeled at the panel",
       "Grounded outlets in every room",
-      "Ten-year workmanship warranty",
+      "Code-compliant installation standards",
     ],
     features: [
       "New circuits for kitchens, baths and HVAC",
@@ -451,7 +451,7 @@ export const services: Service[] = [
       },
       {
         title: "Handoff & Support",
-        body: "Documentation, warranty and optional preventive maintenance.",
+        body: "Full documentation, testing sign-off, and optional preventive maintenance.",
       },
     ],
     whyChooseUs: WHY_US_DEFAULT,
@@ -618,7 +618,7 @@ export const services: Service[] = [
     benefits: [
       "Type-2 whole-home surge devices",
       "Protects HVAC, appliances and electronics",
-      "Manufacturer connected-equipment warranty",
+      "UL 1449 certified surge suppression",
       "Installed alongside panel work at savings",
     ],
     features: [
@@ -888,7 +888,7 @@ export const services: Service[] = [
       "Removes fire risk from old wiring",
       "Adds capacity for modern appliances",
       "Increases property value and insurability",
-      "Ten-year workmanship warranty",
+      "Passes 40-year building recertification",
     ],
     features: [
       "Full-home copper re-wire",
@@ -1465,19 +1465,11 @@ export const reviews: GoogleReview[] = [
 export const generalFaqs = [
   {
     q: "Are you licensed and insured in Florida?",
-    a: "Yes. Miami Electrical Contractors is a Florida State Certified Electrical Contractor (Lic. #EC13010482), carries $2,000,000 in commercial general liability insurance, full statutory workers' compensation, and is veteran-owned.",
-  },
-  {
-    q: "What is your Florida electrical contractor license number?",
-    a: "Our Florida Department of Business and Professional Regulation (DBPR) state certification number is EC13010482. This state certification authorizes us to pull permits for residential, commercial, and industrial electrical work across Miami-Dade County and throughout Florida.",
+    a: "Yes. Miami Electrical Contractors is a Florida State Certified Electrical Contractor, carries $2,000,000 in commercial general liability insurance, full statutory workers' compensation, and is veteran-owned.",
   },
   {
     q: "Do you provide proof of insurance and workers' compensation?",
     a: "Yes. We maintain $2,000,000 in commercial general liability coverage along with comprehensive statutory workers' compensation. Certificates of Insurance (COI) listing your property or management company as additional insured are available upon request.",
-  },
-  {
-    q: "What warranty do you provide on your electrical work?",
-    a: "Every installation and repair is backed by our 1-Year Written Workmanship Warranty. In addition, manufacturer warranties on panels, breakers, lighting, surge protectors, and EV chargers are fully transferred to you.",
   },
   {
     q: "Do you offer 24-hour emergency service?",
@@ -1493,7 +1485,7 @@ export const generalFaqs = [
   },
   {
     q: "Do you pull permits?",
-    a: "Yes — as a state-licensed Florida electrical contractor (Lic. #EC13010482), we pull all required municipal and county permits and coordinate all City of Miami and Miami-Dade inspections directly.",
+    a: "Yes — as a state-licensed Florida electrical contractor, we pull all required municipal and county permits and coordinate all City of Miami and Miami-Dade inspections directly.",
   },
 ];
 
@@ -1507,7 +1499,7 @@ export const stats: Stat[] = [
   {
     value: "State EC",
     label: "FL Certified Contractor",
-    sub: "DBPR Lic. #EC13010482",
+    sub: "Licensed & Insured",
   },
   {
     value: "$2,000,000",
@@ -1520,17 +1512,16 @@ export const stats: Stat[] = [
     sub: "NEC & Miami-Dade Standards",
   },
   {
-    value: "1-Year",
-    label: "Written Workmanship Warranty",
-    sub: "Guaranteed On Every Install",
+    value: "Upfront",
+    label: "Written Estimates",
+    sub: "Transparent Flat-Rate Pricing",
   },
 ];
 
 export const trustBadges = [
   "Veteran Owned",
-  "FL Lic. #EC13010482",
-  "$2M Insured",
-  "1-Yr Written Warranty",
+  "Licensed & Insured",
+  "$2M Coverage",
   "24/7 Live Dispatch",
   "Upfront Written Pricing",
 ];

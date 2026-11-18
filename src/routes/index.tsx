@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "State-certified electrical contractor (Lic. #EC13010482) serving Miami, FL. 24/7 residential, commercial, panel upgrades, EV chargers, and emergency repairs.",
+          "Licensed electrical contractor serving Miami, FL. 24/7 residential, commercial, panel upgrades, EV chargers, and emergency repairs.",
       },
       {
         property: "og:title",
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "State-certified electrical contractor (Lic. #EC13010482) serving Miami, FL. 24/7 residential, commercial, panel upgrades, EV chargers, and emergency repairs.",
+          "Licensed electrical contractor serving Miami, FL. 24/7 residential, commercial, panel upgrades, EV chargers, and emergency repairs.",
       },
       { property: "og:url", content: `${site.url}/` },
     ],
@@ -85,7 +85,7 @@ const featuredProjects = [
     solution:
       "Emergency FPL service disconnect, installed modern 200A Eaton commercial copper panel with Type-1 surge suppression, labeled 24 circuits, and brought all grounding to current NEC code.",
     equipment: "Eaton CH200 Panel, Type-1 Surge Protector, 4/0 AL Cable",
-    permit: "City of Coral Gables Building Dept #EC13010482",
+    permit: "City of Coral Gables Building Dept Permit Approved",
     img: "/images/panel_before_after.jpg",
     badge: "Actual Before & After",
   },
@@ -601,8 +601,8 @@ function Home() {
               },
               {
                 step: "04",
-                title: "Warranty & Walkthrough",
-                body: "We test, tour and back every install with warranty.",
+                title: "Testing & Walkthrough",
+                body: "We test, tour and review every completed install.",
               },
             ].map((s, i) => (
               <motion.div
@@ -673,7 +673,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Verifiable Credentials, Insurance Proof & Warranty Terms */}
+      {/* Verifiable Credentials & Insurance Coverage */}
       <TrustCredentials />
 
       {/* Reviews + Google rating */}
